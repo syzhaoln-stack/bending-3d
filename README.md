@@ -46,3 +46,12 @@ node beam-extension-src/verify-section-response.cjs
 ## 第三方软件
 
 内嵌 Three.js 的 MIT 许可证见 `LICENSE.three.txt`。
+
+## 主应力与斜裂缝：学生探究课堂
+
+[打开八步探究课堂](https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html)
+ · [直接看转动取面](https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=7)
+
+学生沿八幅图依次预测、操作、观察，再完成五道综合题。包括转动假想取面寻找零剪切方向、主拉应力线、斜裂缝与跨缝钢筋，以及照片和完整四点加载录像。教师参考默认收起，回答只保存在当前浏览器，可导出文本；无在线提交或后台收集。
+
+[课堂使用说明与教师参考](SHEAR-CLASSROOM.md)。主应力场取自开裂前矩形梁的线弹性模型；裂缝和配筋为教学示意。网页按需加载同仓库的照片与视频，离线使用需同时保存 `shear-assets/`。本地交付另有完整媒体内嵌的单文件版。
