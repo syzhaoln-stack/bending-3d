@@ -62,3 +62,12 @@ node beam-extension-src/verify-section-response.cjs
 八幅模型现有同步数值及三层追问：先判断、动手验证、数值解释与下一问。第八幅后加入教材活动，比较 440 kN 给定需求的抗剪分担、箍筋间距与混凝土强度的相对影响；三题可填写并下载记录。五道综合题增加数值证据要求。
 
 [教材页码、量化依据与教师问题链](SHEAR-TEXTBOOK-EVIDENCE.md)。弹性应力模型与承载力练习分别说明条件；教材活动不输出完整工程设计验算结论。
+
+
+## 箍筋与弯起筋：完整公式实验（2026-10-11）
+
+[从箍筋开始](https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=8&rebar=stirrups&v=20261011-rebar) · [弯起筋与力分解](https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=8&rebar=bent&v=20261011-rebar)
+
+依据 JTG 3362—2018 第 5.2.9、5.2.11、5.2.13、9.3.10、9.3.12 条核对公式、材料值和构造条件。尺寸图说明 b、h、h₀，配筋图说明肢数、直径与间距，力分解图连接弯起角、设计拉力能力与竖向分量。操作时同步更新面积、配箍率、公式代入及 kN 数值，再比较给定需求、60%/40% 分担约束与构造要求。学生可记录预测、实验结果和解释，并下载回答。
+
+默认 C30、HRB400 的独立课堂算例得到 Vcs≈396.600 kN、Vsb≈171.815 kN；题设需求为 440 kN。默认间距 200 mm 用于一般梁段探索，近支点范围须改用满足加密要求的间距。完整适用条件和页码见[量化依据](SHEAR-TEXTBOOK-EVIDENCE.md)。

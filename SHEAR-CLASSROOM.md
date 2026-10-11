@@ -6,6 +6,12 @@
 
 直接进入转动取面：https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=7
 
+直接进入箍筋公式实验：https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=8&rebar=stirrups&v=20261011-rebar
+
+直接进入弯起筋公式实验：https://syzhaoln-stack.github.io/bending-3d/shear-principal-lab.html?step=8&rebar=bent&v=20261011-rebar
+
+第八幅点“箍筋”或“弯起筋”后，图下直接显示完整公式、面积和配筋率计算、逐步代入及 kN 结果。学生可改变直径、肢数、间距、根数和角度，最后比较需求、分担及构造条件。原来的比例活动保留为延伸追问。
+
 ## 今天怎么用
 
 建议安排约 35 分钟：17 分钟逐幅探索，8 分钟做第 8 幅下方的教材分担与箍筋间距实验，5 分钟两人交流证据，5 分钟独立回答。时间较紧时，前五幅由教师带看，学生重点操作第七、八幅及教材活动。

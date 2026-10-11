@@ -40,7 +40,7 @@ THE SOFTWARE.
 @media(max-width:560px){.app{padding:15px 12px 12px}.masthead{display:block;margin-bottom:13px}.eyebrow{font-size:9px;letter-spacing:1.5px;margin-bottom:6px}h1{font-size:21px;letter-spacing:0}.continue-link{margin-top:10px;padding:7px 10px;font-size:10px}.lesson-sequence{gap:5px;margin-bottom:10px}.lesson-step{display:block;text-align:center;border-radius:8px;padding:9px 3px}.step-number{display:block;font-size:15px;margin-bottom:5px}.step-title{font-size:10px;font-weight:500;white-space:nowrap}.workspace{gap:10px}.scene-panel{height:558px;border-radius:12px}.scene-header{left:13px;top:57px;max-width:calc(100% - 26px)}.scene-header h2{font-size:14px;margin-bottom:4px}.scene-header p{font-size:10px;line-height:1.7}.view-toolbar{left:12px;right:auto;top:11px;padding:3px}.view-toolbar button{font-size:10px;padding:6px 10px}.material-reminder{left:13px;top:130px;font-size:9px;gap:6px}.fixed-tag,.rotating-tag{padding:3px 5px}.scene-footer{min-height:142px;padding:12px 13px}.scene-canvas{bottom:142px}.stage-hint{bottom:153px;left:13px;right:13px;font-size:9px}.takeaway{font-size:12px;line-height:1.65}.intuition-caption{font-size:10px;line-height:1.75}.inspector{display:block;padding:17px;border-radius:12px}.inspector-controls{padding:0;border:0}.mini-directions{height:195px}.local-explanation{margin-bottom:15px}.metrics{padding-top:12px}.metric-label{font-size:10px}.control-label,.control-head{font-size:11px}.control-note,.toggle,.control-button,.family-options label{font-size:11px}.button-pair{gap:8px}.control-button{padding:9px 7px}.toggle-list{gap:11px}.control-group+.control-group{margin-top:15px}.model-notes-content{padding:11px 3px;font-size:10px}.footer-mark{display:none}.ribbon-note{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
-<meta name="classroom-version" content="2026-10-11-quantitative-inquiry">
+<meta name="classroom-version" content="2026-10-11-rebar-formulas">
 </head>
 <body data-mode="point" data-course="guided">
 <style>
@@ -135,6 +135,63 @@ body:not([data-course="guided"])>#gd-root{display:none}
     <div class="gd-control"><div class="gd-control-top"><label id="gd-control-label" for="gd-control">截面位置</label><div class="gd-control-readout"><button id="gd-actual" type="button" hidden>恢复实际变形</button><output id="gd-value" for="gd-control">x = 0.00 m</output></div></div><input id="gd-control" type="range" min="-2.7" max="2.7" step="0.01" value="0"><div id="gd-endpoints" class="gd-endpoints"><span>左支座</span><span>右支座</span></div><div id="gd-ticks" class="gd-ticks" hidden></div></div>
   </section>
   <style>
+#rc-root{--rc-blue:#226782;--rc-ink:#243e4b;--rc-muted:#69808c;--rc-line:#dce6eb;--rc-pale:#f1f7fa;margin:18px 0;border:1px solid var(--rc-line);border-radius:11px;background:#fff;color:var(--rc-ink);font-family:"Microsoft YaHei",system-ui,sans-serif;overflow:hidden}#rc-root *{box-sizing:border-box}#rc-root[hidden],#rc-root [hidden]{display:none!important}#rc-root button,#rc-root input,#rc-root select,#rc-root textarea{font:inherit}#rc-root .rc-header{padding:14px 17px;background:#f7fafc;border-bottom:1px solid var(--rc-line)}#rc-root h2.rc-title{font-size:17px;line-height:1.7;font-weight:650;margin:0 0 5px}#rc-root .rc-context{font-size:11px;line-height:1.9;color:var(--rc-muted);margin:0}#rc-root .rc-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:10px 12px;border-bottom:1px solid var(--rc-line)}#rc-root .rc-tabs button{min-height:47px;padding:7px 8px;background:#fff;border:1px solid var(--rc-line);border-radius:6px;color:var(--rc-blue);cursor:pointer;font-size:12px;line-height:1.7}#rc-root .rc-tabs button[aria-selected="true"]{background:var(--rc-blue);border-color:var(--rc-blue);color:#fff}#rc-root .rc-tabs button span{display:block;font:10px Consolas,"Microsoft YaHei",sans-serif;opacity:.8}#rc-root .rc-wait{margin:0;padding:10px 17px 13px;color:var(--rc-muted);font-size:11px;line-height:1.8}#rc-root .rc-panel{padding:16px 17px}#rc-root h3.rc-panel-title{font-size:15px;font-weight:650;line-height:1.8;margin:0 0 8px}#rc-root .rc-givens{font-size:10px;color:var(--rc-muted);line-height:1.9;margin:0 0 12px;background:#f8fafc;padding:9px 11px;border-radius:5px}#rc-root .rc-formula{margin:9px 0 12px;padding:11px;background:var(--rc-pale);border:1px solid #dce8ee;border-radius:7px;max-width:100%;overflow-x:auto;overflow-y:hidden}#rc-root .rc-formula math{font-size:17px;color:#285d76;margin:5px 0;min-width:max-content}#rc-root .rc-formula-label{font-size:10px;color:var(--rc-muted);margin:0 0 4px}#rc-root .rc-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:18px;align-items:start}#rc-root .rc-controls{min-width:0}#rc-root .rc-control{margin:10px 0}#rc-root .rc-control label{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:12px;line-height:1.8}#rc-root .rc-control label output{font:14px Consolas,"Microsoft YaHei",sans-serif;color:var(--rc-blue);white-space:nowrap}#rc-root input[type="range"]{width:100%;height:33px;accent-color:var(--rc-blue);display:block;margin:0;cursor:ew-resize;touch-action:pan-y}#rc-root .rc-control select{width:100%;min-height:40px;border:1px solid #c8dbe5;border-radius:5px;background:#fff;color:var(--rc-ink);padding:7px 10px;margin-top:4px;font-size:12px}#rc-root .rc-ends{display:flex;justify-content:space-between;color:var(--rc-muted);font-size:9px}#rc-root .rc-diagram{width:100%;height:auto;display:block;background:#fbfdfe;border:1px solid #e3edf2;border-radius:6px}#rc-root .rc-diagram-note{font-size:9px;color:var(--rc-muted);line-height:1.8;margin:6px 0}#rc-root .rc-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 0}#rc-root .rc-metric{background:var(--rc-pale);border-radius:6px;padding:9px 10px;min-width:0}#rc-root .rc-metric span{display:block;font-size:10px;color:var(--rc-muted);line-height:1.7}#rc-root .rc-metric output{display:block;font:16px/1.8 Consolas,"Microsoft YaHei",sans-serif;color:var(--rc-blue);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}#rc-root .rc-steps{margin:10px 0;padding-left:21px;font-size:12px;color:#486a7c;line-height:1.9}#rc-root .rc-steps li{padding:4px 0;overflow-wrap:anywhere}#rc-root .rc-note{font-size:11px;line-height:1.9;color:#527486;margin:9px 0}#rc-root .rc-important{background:#f6f9fb;border-left:3px solid #a7c6d6;padding:8px 11px}#rc-root .rc-checks{list-style:none;padding:0;margin:12px 0;display:grid;gap:6px}#rc-root .rc-checks li{font-size:12px;line-height:1.9;border:1px solid #d9e7e5;border-radius:5px;padding:8px 10px;background:#f6faf9;color:#417669}#rc-root .rc-checks li[data-met="false"]{color:#9a6036;background:#fff8ef;border-color:#ead6bb}#rc-root .rc-status{font-size:13px;line-height:1.9;font-weight:600;padding:11px 12px;border-radius:6px;background:#f0f7f5;color:#32715e;margin:12px 0}#rc-root .rc-status[data-met="false"]{color:#9a6036;background:#fff6e9}#rc-root .rc-answer-label{display:block;font-size:11px;color:#4f7183;line-height:1.9;margin:14px 0 5px}#rc-root textarea{display:block;width:100%;min-height:78px;padding:9px 11px;border:1px solid #c9dce6;border-radius:6px;color:var(--rc-ink);font:12px/1.8 "Microsoft YaHei",system-ui,sans-serif;resize:vertical}#rc-root textarea::placeholder{color:#899da7}#rc-root .rc-footer{border-top:1px solid var(--rc-line);padding:12px 17px}#rc-root .rc-source{font-size:9px;line-height:1.9;color:var(--rc-muted);margin:0 0 8px}#rc-root .rc-source a{color:var(--rc-blue)}#rc-root .rc-record{display:flex;align-items:center;justify-content:space-between;gap:12px}#rc-root .rc-record p{font-size:10px;color:var(--rc-muted);line-height:1.8;margin:0}#rc-root #rc-download{min-height:42px;padding:8px 12px;border:0;border-radius:6px;background:var(--rc-blue);color:#fff;cursor:pointer;white-space:nowrap;font-size:12px}#rc-root #rc-save-status{font-size:10px;line-height:1.8;color:var(--rc-muted);margin:7px 0 0}#rc-root #rc-save-status[data-error="true"]{color:#a15d35}#rc-root button:focus-visible,#rc-root input:focus-visible,#rc-root select:focus-visible,#rc-root textarea:focus-visible{outline:3px solid #61a1bd;outline-offset:3px}
+@media(max-width:650px){#rc-root .rc-columns{grid-template-columns:1fr;gap:10px}#rc-root .rc-formula math{font-size:15px}#rc-root .rc-tabs{padding:8px;gap:4px}#rc-root .rc-tabs button{font-size:11px;padding:6px 4px}#rc-root .rc-tabs button span{font-size:9px}#rc-root .rc-panel{padding:13px 12px}#rc-root .rc-header{padding:12px}#rc-root h2.rc-title{font-size:15px}#rc-root .rc-context{font-size:10px}#rc-root .rc-metric output{font-size:13px}#rc-root .rc-metric span{font-size:9px}#rc-root .rc-metric{padding:7px 8px}#rc-root .rc-steps{font-size:11px;padding-left:19px}#rc-root .rc-givens{font-size:9px}#rc-root .rc-footer{padding:10px 12px}#rc-root .rc-record{display:block}#rc-root #rc-download{margin-top:9px;width:100%;min-height:44px}#rc-root .rc-checks li{font-size:11px}#rc-root .rc-status{font-size:12px}#rc-root .rc-note{font-size:10px}}
+</style>
+<section id="rc-root" aria-labelledby="rc-title" hidden>
+  <header class="rc-header"><h2 id="rc-title" class="rc-title">箍筋与弯起筋 · 公式和数值实验</h2><p class="rc-context">独立配筋练习：课堂给定设计需求 D = 440 kN（γ₀ 已并入）。它与上方两个 40 kN 集中荷载的弹性模型分开，不表示已选取规范控制截面。</p></header>
+  <div class="rc-tabs" role="tablist" aria-label="配筋计算三步"><button id="rc-tab-stirrups" type="button" role="tab" aria-controls="rc-panel-stirrups" aria-selected="false" data-rc-mode="stirrups"><span>01 · 箍筋算多少</span>从面积与间距算 Vcs</button><button id="rc-tab-bent" type="button" role="tab" aria-controls="rc-panel-bent" aria-selected="false" data-rc-mode="bent"><span>02 · 弯起筋算多少</span>从拉力分量算 Vsb</button><button id="rc-tab-check" type="button" role="tab" aria-controls="rc-panel-check" aria-selected="false" data-rc-mode="check"><span>03 · 合起来够不够</span>比较和式与分担条件</button></div>
+  <p id="rc-wait" class="rc-wait">点击上方任一步开始计算；原模型显现“箍筋”或“弯起筋”时，也会自动打开对应步骤。</p>
+  <div id="rc-work" hidden>
+    <div class="rc-control" style="margin:12px 17px 5px"><label for="rc-location">验算位置（仅改变构造限值，D 保持 440 kN）</label><select id="rc-location"><option value="general" selected>一般梁段</option><option value="support">近支点 h = 800 mm 范围</option></select></div>
+    <p id="rc-compact-check" class="rc-note rc-important" style="margin:8px 17px"></p>
+    <section id="rc-panel-stirrups" class="rc-panel" role="tabpanel" aria-labelledby="rc-tab-stirrups" hidden>
+      <h3 class="rc-panel-title">箍筋：从面积与间距算 Vcs</h3>
+      <p class="rc-givens">课堂条件：矩形简支普通钢筋混凝土梁，α₁ = α₂ = α₃ = 1；b = 420 mm，h = 800 mm，h₀ = 740 mm（有效高度 h₀ ≠ 总高度 h）；验算处保留纵向受拉钢筋 4Φ25，As = 1963.495 mm²；C30，fcu,k = 30 MPa；HRB400，fsv = fsd = 330 MPa。</p>
+      <p class="rc-note">α₁：异号弯矩影响，本简支梁取 1；α₂：预应力提高影响，普通 RC 取 1；α₃：受压翼缘影响，本矩形取 1。改变弯起筋时保持验算处 As 不变；若从原纵筋弯起，须另查抗弯、支座贯通与锚固。上方三维钢筋仅作形态示意，不随计算器重新布置。</p>
+      <div class="rc-formula"><p class="rc-formula-label">完整公式 · ρsv 代入小数，P 代入百分数值（宽公式可横向查看）</p>
+        <math display="block" aria-label="配箍率等于n乘圆周率乘箍筋直径平方，除以4bs"><mrow><msub><mi>ρ</mi><mi>sv</mi></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mi>π</mi><msubsup><mi>d</mi><mi>sv</mi><mn>2</mn></msubsup></mrow><mrow><mn>4</mn><mi>b</mi><mi>s</mi></mrow></mfrac><mo>；</mo><mi>P</mi><mo>=</mo><mi>min</mi><mo>(</mo><mfrac><mrow><mn>100</mn><msub><mi>A</mi><mi>s</mi></msub></mrow><mrow><mi>b</mi><msub><mi>h</mi><mn>0</mn></msub></mrow></mfrac><mo>,</mo><mn>2.5</mn><mo>)</mo></mrow></math>
+        <math display="block" aria-label="Vcs等于0.45乘10的负3次方乘alpha1 alpha2 alpha3 b h0，乘根号下2加0.6P，乘根号fcu,k，乘配箍率，乘fsv"><mrow><msub><mi>V</mi><mi>cs</mi></msub><mo>=</mo><mn>0.45</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup><msub><mi>α</mi><mn>1</mn></msub><msub><mi>α</mi><mn>2</mn></msub><msub><mi>α</mi><mn>3</mn></msub><mi>b</mi><msub><mi>h</mi><mn>0</mn></msub><msqrt><mrow><mo>(</mo><mn>2</mn><mo>+</mo><mn>0.6</mn><mi>P</mi><mo>)</mo><msqrt><msub><mi>f</mi><mrow><mi>cu</mi><mo>,</mo><mi>k</mi></mrow></msub></msqrt><msub><mi>ρ</mi><mi>sv</mi></msub><msub><mi>f</mi><mi>sv</mi></msub></mrow></msqrt></mrow></math>
+      </div>
+      <div class="rc-columns"><div class="rc-controls">
+        <div class="rc-control"><label for="rc-dsv"><span>箍筋直径 dsv</span><output id="rc-dsv-label" for="rc-dsv">10 mm</output></label><input id="rc-dsv" type="range" min="8" max="16" step="2" value="10"><div class="rc-ends"><span>Φ8</span><span>Φ16</span></div></div>
+        <div class="rc-control"><label for="rc-nsv">箍筋肢数 n</label><select id="rc-nsv"><option value="2" selected>双肢箍 · 2 肢</option><option value="4">四肢箍 · 4 肢</option></select></div>
+        <div class="rc-control"><label for="rc-s"><span>箍筋间距 s</span><output id="rc-s-label" for="rc-s">200 mm</output></label><input id="rc-s" type="range" min="100" max="400" step="25" value="200"><div class="rc-ends"><span>100 mm</span><span>400 mm</span></div></div>
+      </div><div><svg id="rc-stirrup-diagram" class="rc-diagram" viewBox="0 0 560 270" role="img" aria-label="截面宽高和有效高度、箍筋肢数及沿梁长间距的示意"></svg><p class="rc-diagram-note">左图看截面与肢数，右图看沿梁长间距；h₀ 量至受拉纵筋合力点，不等于总高 h。斜裂缝固定，图示未完成构造设计。</p></div></div>
+      <div class="rc-metrics"><div class="rc-metric"><span>配箍率 ρsv</span><output id="rc-rho" data-rc-value="rhoSv"></output></div><div class="rc-metric"><span id="rc-P-label">P · 式内使用的百分数值</span><output id="rc-P" data-rc-value="P"></output></div><div class="rc-metric"><span>混凝土 + 箍筋贡献 Vcs</span><output id="rc-vcs" data-rc-value="Vcs"></output></div></div>
+      <ol id="rc-stirrup-steps" class="rc-steps"></ol>
+      <p class="rc-note rc-important">Vcs 是混凝土与箍筋的共同贡献，不等同于箍筋单独贡献 Vsv。这里只改变配筋输入，上方弹性模型的 σ₁ 和主方向不随之改变。</p>
+      <label class="rc-answer-label" for="rc-answer-stirrups">问题 1：间距从 200 mm 改为 400 mm，ρsv 与 Vcs 各怎样变化？为什么只增加纵筋不能替代这一步？</label><textarea id="rc-answer-stirrups" rows="3" placeholder="记录两种间距的Vcs，再用公式中的平方根关系说明（可选）"></textarea>
+    </section>
+    <section id="rc-panel-bent" class="rc-panel" role="tabpanel" aria-labelledby="rc-tab-bent" hidden>
+      <h3 class="rc-panel-title">弯起筋：从拉力的竖向分量算 Vsb</h3>
+      <p class="rc-givens">同一弯起平面内，根数与直径决定总面积 ΣAsb；HRB400，fsd = 330 MPa。θs 从水平梁长方向量，构造宜取 45°；30°、60°用于参数探索，不直接作为推荐布置。本例保持验算处纵筋 As 不变，弯起后的抗弯与锚固另核。</p>
+      <div class="rc-formula"><p class="rc-formula-label">完整公式 · 面积 mm²，强度 MPa，结果 kN</p><math display="block" aria-label="Vsb等于0.75乘10的负3次方乘fsd乘同一平面弯起筋总面积乘sin theta s"><mrow><msub><mi>V</mi><mi>sb</mi></msub><mo>=</mo><mn>0.75</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup><msub><mi>f</mi><mi>sd</mi></msub><mo>∑</mo><msub><mi>A</mi><mi>sb</mi></msub><mi>sin</mi><msub><mi>θ</mi><mi>s</mi></msub></mrow></math></div>
+      <div class="rc-columns"><div class="rc-controls">
+        <div class="rc-control"><label for="rc-nsb"><span>同一弯起平面内根数</span><output id="rc-nsb-label" for="rc-nsb">2 根</output></label><input id="rc-nsb" type="range" min="0" max="4" step="1" value="2"><div class="rc-ends"><span>0 根</span><span>4 根</span></div></div>
+        <div class="rc-control"><label for="rc-dsb">弯起筋直径 dsb</label><select id="rc-dsb"><option value="20">Φ20</option><option value="22">Φ22</option><option value="25" selected>Φ25</option><option value="28">Φ28</option><option value="32">Φ32</option></select></div>
+        <div class="rc-control"><label for="rc-theta"><span>弯起角 θs</span><output id="rc-theta-label" for="rc-theta">45°</output></label><input id="rc-theta" type="range" min="30" max="60" step="5" value="45"><div class="rc-ends"><span>30°</span><span>60°</span></div></div>
+      </div><div><svg id="rc-bent-diagram" class="rc-diagram" viewBox="0 0 560 190" role="img" aria-label="弯起筋拉力与竖向分量以及斜裂缝交叉示意"></svg><p class="rc-diagram-note">红线为固定斜裂缝，金色钢筋跨缝；箭头表示拉力方向和竖向分量。示意未完成锚固和弯起位置设计。</p></div></div>
+      <div class="rc-metrics"><div class="rc-metric"><span>同一平面总面积 ΣAsb</span><output id="rc-area-bent" data-rc-value="bentArea"></output></div><div class="rc-metric"><span>拉力竖向分量 T·sinθs</span><output id="rc-vertical-force" data-rc-value="verticalForce"></output></div><div class="rc-metric"><span>弯起筋公式贡献 Vsb</span><output id="rc-vsb" data-rc-value="Vsb"></output></div></div>
+      <ol id="rc-bent-steps" class="rc-steps"></ol>
+      <label class="rc-answer-label" for="rc-answer-bent">问题 2：增加弯起筋根数或改变角度，会改变哪一项？公式和式大于 440 kN 就能直接说整根梁安全吗？</label><textarea id="rc-answer-bent" rows="3" placeholder="比较Vsb、Vcs与计入上限，再写出仍需检查的条件（可选）"></textarea>
+    </section>
+    <section id="rc-panel-check" class="rc-panel" role="tabpanel" aria-labelledby="rc-tab-check" hidden>
+      <h3 class="rc-panel-title">合计：先看公式和式，再看本题分担条件</h3>
+      <div class="rc-formula"><math display="block" aria-label="Vu等于Vcs加Vsb"><mrow><msub><mi>V</mi><mi>u</mi></msub><mo>=</mo><msub><mi>V</mi><mi>cs</mi></msub><mo>+</mo><msub><mi>V</mi><mi>sb</mi></msub></mrow></math><p id="rc-total-substitution" class="rc-note"></p></div>
+      <div class="rc-metrics"><div class="rc-metric"><span>原始公式和式 Vu</span><output id="rc-vu" data-rc-value="Vu"></output></div><div class="rc-metric"><span>本题允许计入的弯起筋能力上限</span><output id="rc-credited-bent" data-rc-value="creditedVsb"></output></div><div class="rc-metric"><span>本题计入能力后的和式</span><output id="rc-credited-total" data-rc-value="creditedTotal"></output></div></div>
+      <svg id="rc-total-diagram" class="rc-diagram" viewBox="0 0 560 135" role="img" aria-label="混凝土箍筋与弯起筋贡献和440千牛需求的比较"></svg>
+      <ul class="rc-checks"><li id="rc-check-vcs"></li><li id="rc-check-bent"></li><li id="rc-check-required-bent"></li><li id="rc-check-sum"></li><li id="rc-check-section"></li><li id="rc-check-rho"></li><li id="rc-check-spacing"></li><li id="rc-check-diameter"></li></ul>
+      <p id="rc-result" class="rc-status" role="status"></p>
+      <p id="rc-section-caption" class="rc-note"></p>
+      <p class="rc-note rc-important">D = 440 kN 已含 γ₀。本题 Vcs 至少需具备 264 kN 的分担能力，弯起筋最多计入 176 kN。先用 Vcs，再求还需的弯起筋贡献，不强制实际分配恰好为 60/40；原始 Vsb 较大并不等于违规，超出部分不用于本次需求分担。</p>
+      <p class="rc-note">这里列出和式、截面上限、最小配箍率、间距与直径条件。完整设计仍需核查控制截面、构造适用范围、锚固、弯起点及抗弯等要求，不能据此宣称整梁设计安全。</p>
+    </section>
+    <footer class="rc-footer"><p class="rc-source">公式与分担依据：<a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=35" target="_blank" rel="noopener">JTG 3362—2018 第 5.2.9 条（PDF 第 35 页）</a>；<a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=37" target="_blank" rel="noopener">第 5.2.13(1) 条（PDF 第 37 页）</a>。构造详见<a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=113" target="_blank" rel="noopener">第 9.3.10 条（PDF 第 113 页）</a>与<a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=114" target="_blank" rel="noopener">第 9.3.12 条（PDF 第 114 页）</a>。材料按 C30、HRB400 课堂给定；钢筋设计强度见同规范表 3.2.3-1。单位：mm、MPa、kN。</p><div class="rc-record"><p>输入与两问回答仅在本机浏览器保存，没有线上收集或提交。</p><button id="rc-download" type="button">下载本节计算与回答 .txt</button></div><p id="rc-save-status" role="status" aria-live="polite">本地记录 · 可选填写</p></footer>
+  </div>
+</section>
+
+  <style>
 #qe-root{--qe-ink:#243e4b;--qe-blue:#226782;--qe-muted:#69808c;--qe-line:#dce6eb;--qe-pale:#f1f7fa;margin:0 0 16px;border:1px solid var(--qe-line);border-radius:10px;background:#fff;color:var(--qe-ink);font-family:"Microsoft YaHei",system-ui,sans-serif;overflow:hidden}
 #qe-root *{box-sizing:border-box}#qe-root [hidden]{display:none!important}.qe-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 15px;border-bottom:1px solid var(--qe-line);background:#f7fafc}.qe-badge{font-size:11px;letter-spacing:.06em;font-weight:650;color:var(--qe-blue)}.qe-scope{font-size:10px;line-height:1.7;color:var(--qe-muted);margin:0}.qe-main{padding:13px 15px 11px}.qe-kicker{display:block;font:11px Consolas,"Microsoft YaHei",sans-serif;color:var(--qe-muted);margin-bottom:5px}#gd-root #qe-core,#qe-root #qe-core{font-size:15px;font-weight:650;line-height:1.8;margin:0 0 10px;color:var(--qe-ink)}.qe-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px}.qe-metric{min-width:0;padding:9px 11px;border-radius:6px;background:var(--qe-pale)}.qe-metric-label{display:block;font-size:10px;line-height:1.6;color:var(--qe-muted);margin-bottom:3px}.qe-metric output{display:block;font:14px/1.7 Consolas,"Microsoft YaHei",sans-serif;color:var(--qe-blue);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.qe-position{font-size:11px;color:var(--qe-muted);line-height:1.8;margin:8px 0 0}.qe-warning{font-size:11px;line-height:1.8;margin:7px 0 0;color:#9c5b2f;background:#fff8ef;border-left:3px solid #d4ae76;padding:7px 10px}.qe-chain{margin:0 15px 12px;border-top:1px solid var(--qe-line);padding-top:3px}.qe-layer{font-size:12px;line-height:1.9}.qe-layer>summary{cursor:pointer;min-height:40px;padding:9px 0;color:var(--qe-blue);font-weight:600}.qe-layer>p{margin:0 0 9px;color:#4e6d7d}.qe-layer .qe-layer{margin:6px 0 9px 5px;padding-left:13px;border-left:2px solid #c7dce6}.qe-formula{white-space:pre-line;overflow-wrap:anywhere;background:#f7fafc;border:1px solid #e2ebf0;border-radius:5px;padding:9px 11px;font:12px/1.9 Consolas,"Microsoft YaHei",sans-serif!important;color:#355d73!important}.qe-next{border-top:1px dashed #ccdee7;padding-top:9px;color:var(--qe-blue)!important}.qe-next strong{font-size:11px;margin-right:5px}.qe-footnote{font-size:9px;color:#7d929d;line-height:1.8;margin:0;padding:9px 15px;border-top:1px solid #edf2f5}
 #qe-root summary:focus-visible{outline:3px solid #61a1bd;outline-offset:2px;border-radius:3px}
@@ -163,7 +220,7 @@ body:not([data-course="guided"])>#gd-root{display:none}
     <summary id="ts-open">从斜裂缝继续追问：钢筋怎样分担剪力？</summary>
     <div class="ts-body">
       <p class="ts-source">来源：11(1).pdf，PDF 第 19 页图 4-27，PDF 第 21 页式 (4-4)、(4-5)。</p>
-      <p class="ts-context">课堂给定需分担剪力 440 kN：取课件包络图数字作为练习，需求已单独给定，不表示已选取规范控制截面。它与当前三维模型的 40 kN 集中荷载是独立数值，下面也没有计算实际承载力。</p>
+      <p class="ts-context">本节只练习分配与相对比例。课堂给定需分担剪力 440 kN：取课件包络图数字作为练习，不表示已选取规范控制截面，与上方 40 kN 弹性荷载独立。完整公式与绝对数值代入见配筋图下方的“箍筋与弯起筋”实验。</p>
       <h3 class="ts-question">1 · 两部分相加等于 440 kN，就足以认为分担合理吗？</h3>
       <p class="ts-copy">拖动弯起筋拟分担比例，比较混凝土与箍筋共同分担的部分。先试 30%，再试 50%，说明两种分配的区别。</p>
       <p class="ts-formula">Vu = Vcs + Vsb
@@ -2581,7 +2638,7 @@ root.GuidedSurface=Object.freeze({draw,localDraw,pick,screen,scales,cell});
   function save(){notes.updatedAt=new Date().toISOString();try{localStorage.setItem(storageKey,JSON.stringify(notes));storageAvailable=true;$('ca-save-status').textContent='已保存在当前浏览器 · 无线上收集，未提交给老师。';$('ca-save-status').classList.remove('ca-status-error');return true;}catch(error){storageAvailable=false;$('ca-save-status').textContent='当前浏览器不能自动保存，请用“下载我的记录”保留本次内容。';$('ca-save-status').classList.add('ca-status-error');return false;}}
   function restore(){try{const saved=JSON.parse(localStorage.getItem(storageKey)||'null');if(saved&&saved.version===1){for(const lesson of lessons){const key=String(lesson.stage);if(saved.observations&&typeof saved.observations[key]==='string')notes.observations[key]=saved.observations[key];}for(const key of ['q1','q2','q3','q4','q5'])if(saved.answers&&typeof saved.answers[key]==='string')notes.answers[key]=saved.answers[key];if(Array.isArray(saved.visited))notes.visited=saved.visited.filter(stage=>Number.isInteger(stage)&&stage>=-1&&stage<=6);notes.updatedAt=typeof saved.updatedAt==='string'?saved.updatedAt:null;}}catch(error){storageAvailable=false;$('ca-save-status').textContent='当前浏览器不能读取自动保存的记录；可以继续实验，并下载本次记录。';$('ca-save-status').classList.add('ca-status-error');}document.querySelectorAll('#ca-review [data-answer]').forEach(node=>{node.value=notes.answers[node.dataset.answer]||'';});answerStatus();}
   function lessonAPI(){return window.guidedLesson;}
-  function runQuick(quick,button){const api=lessonAPI();if(!api){status('模型尚未准备好，请稍后再点一次。',true);return;}try{if(quick[1]==='point')api.selectPoint(quick[2],quick[3]);else if(quick[1]==='principal'){api.update(0);api.selectPrincipalPoint(quick[2],quick[3]);}else api.update(quick[2]);}catch(error){status('本次操作没有完成，请使用模型下方的滑块继续。',true);}}
+    function runQuick(quick,button){const api=lessonAPI();if(!api){status('模型尚未准备好，请稍后再点一次。',true);return;}try{if(quick[1]==='point')api.selectPoint(quick[2],quick[3]);else if(quick[1]==='principal'){api.update(0);api.selectPrincipalPoint(quick[2],quick[3]);}else{api.update(quick[2]);if(currentStage===6&&window.rebarCalculation&&(quick[2]===4||quick[2]===5))window.rebarCalculation.open(quick[2]===4?'stirrups':'bent');}}catch(error){status('本次操作没有完成，请使用模型下方的滑块继续。',true);}}
   function renderStage(rawStage){const stage=Math.max(-1,Math.min(6,Math.round(Number(rawStage))));if(!Number.isFinite(stage))return;currentStage=stage;const lesson=lessons[stage+1];if(!notes.visited.includes(stage))notes.visited.push(stage);$('ca-action').textContent=lesson.action;$('ca-prompt').textContent=lesson.question;$('ca-scratch-label').textContent='第 '+(stage+2)+' 幅 · '+lesson.title+'：操作后，写下你看到的变化和理由。';$('ca-scratch').value=notes.observations[String(stage)]||'';document.querySelectorAll('#ca-step-nav [data-stage]').forEach(button=>{const index=Number(button.dataset.stage);if(index===stage)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');button.dataset.visited=String(notes.visited.includes(index));});const holder=$('ca-quick');holder.replaceChildren();for(const [index,quick] of lesson.quick.entries()){if(stage===6&&index===6){const label=document.createElement('span');label.className='ca-quick-label';label.textContent='比较观察位置（回到各点方向）';holder.append(label);}const button=document.createElement('button');button.type='button';button.textContent=quick[0];button.addEventListener('click',()=>runQuick(quick,button));holder.append(button);}save();}
   function scrollTo(node,focus=false){const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;node.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});if(focus)node.focus({preventScroll:true});}
   function openReview(){const review=$('ca-review');review.hidden=false;answerStatus();if(!storageAvailable)status('当前浏览器不能自动保存；请下载记录保留本次回答。',true);scrollTo(review,true);}
@@ -2732,7 +2789,7 @@ root.GuidedSurface=Object.freeze({draw,localDraw,pick,screen,scales,cell});
       add('sigmaX','当前 P 的正应力 σx',r.sigmaX,'MPa');add('tauXY','当前 P 的剪应力 τxy',r.tauXY,'MPa');add('sigma1','当前 P 的主拉应力 σ1',r.sigma1,'MPa');add('thetaDeg','当前 P 的主拉方向 θ1',r.tensionDefined?r.thetaDeg:'无有效正主拉方向',r.tensionDefined?'°':'',2);
       formula='本模型取 σy = 0。\nσ1 = σx/2 + √[(σx/2)² + τxy²] = '+f(r.sigma1)+' MPa。\nσ2 = σx/2 − √[(σx/2)² + τxy²] = '+f(r.sigma2)+' MPa。\n'+(r.tensionDefined?'θ1 = ½ atan2(2τxy, σx) = '+f(r.thetaDeg,2)+'°（从梁长 +x 轴逆时针量，方向轴与加 180° 等价）。':'当前没有正的主拉应力，不指定或绘制有效的主拉方向；灰点仍可能受压。');
       explain='先在同一点的不同方向中找最大的法向应力 σ1，再比较不同点的 σ1；这两种“最大”不同。应力线的切线给出当地方向，线上的大小可变。示意裂缝近似垂直于开裂前主拉方向，两侧沿该方向张开；可靠锚固的跨缝钢筋可传递拉力，但这些弹性数值没有计算开裂后混凝土、钢筋和锚固的共同承载力。';
-      next='展开下方“从斜裂缝继续追问”，用教材关系考察混凝土与箍筋、弯起筋怎样分担剪力，以及箍筋间距减半时抗剪贡献怎样变化。';
+      next='点“箍筋”或“弯起筋”，在配筋图下方直接查看完整公式、参数和逐步代入；再用 440 kN 课堂需求比较各项贡献。下方另有分配与相对比例练习。';
       position=point+'；θ1 表示主应力作用面的法向。没有正主拉作用时不显示伪方向。';
       warning=r.revealProgress>=2?'裂缝与配筋阶段：上述读数仍是开裂前弹性参照，不是开裂后应力场；不能据此确定真实起裂时间、精确裂缝轨迹或配筋承载力。':'';
     }
@@ -2831,6 +2888,153 @@ root.GuidedSurface=Object.freeze({draw,localDraw,pick,screen,scales,cell});
   $('ts-download').addEventListener('click',()=>{try{const blob=new Blob(['\uFEFF',recordText()],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='教材抗剪-问题链记录.txt';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);setStatus('已生成本节记录下载；请查看浏览器下载列表。文件不代表已提交。');}catch(error){setStatus('下载未完成，请选中回答文字手动复制保存。',true);}});
   window.addEventListener('guided-stage-change',schedule);window.addEventListener('load',schedule,{once:true});
   window.textbookShear={reading,refresh:schedule,recordText};
+  restore();schedule();
+})();
+
+</script>
+<script>
+/* Absolute classroom shear calculation: mm, MPa, kN. Separate from the elastic beam model. */
+(()=>{
+  'use strict';
+  const $=id=>document.getElementById(id),root=$('rc-root');
+  const DEFAULTS=Object.freeze({b:420,h:800,h0:740,As:4*Math.PI*25**2/4,fcu:30,fsv:330,fsd:330,alpha1:1,alpha2:1,alpha3:1,nsv:2,dsv:10,s:200,nsb:2,dsb:25,theta:45,demand:440,location:'general'});
+  function calculate(parameters={}){
+    const p={...DEFAULTS,...parameters};
+    for(const key of Object.keys(DEFAULTS)){if(key!=='location'&&(typeof p[key]!=='number'||!Number.isFinite(p[key])))throw new TypeError(key+' must be a finite number');}
+    if(!['general','support'].includes(p.location))throw new RangeError('location must be general or support');
+    for(const key of ['b','h','h0','dsv','dsb','s','alpha1','alpha2','alpha3','demand'])if(p[key]<=0)throw new RangeError(key+' must be positive');
+    for(const key of ['As','fcu','fsv','fsd','nsb'])if(p[key]<0)throw new RangeError(key+' must be nonnegative');
+    if(!Number.isInteger(p.nsv)||p.nsv<1||!Number.isInteger(p.nsb))throw new RangeError('bar counts must be integers');
+    if(p.theta<0||p.theta>90)throw new RangeError('theta must lie from 0 to 90 degrees');
+    const stirrupAreaOne=Math.PI*p.dsv**2/4,stirrupArea=p.nsv*stirrupAreaOne,rhoSv=stirrupArea/(p.b*p.s);
+    const Praw=100*p.As/(p.b*p.h0),P=Math.min(Praw,2.5),radicand=(2+.6*P)*Math.sqrt(p.fcu)*rhoSv*p.fsv;
+    const Vcs=.45e-3*p.alpha1*p.alpha2*p.alpha3*p.b*p.h0*Math.sqrt(radicand);
+    const bentAreaOne=Math.PI*p.dsb**2/4,bentArea=p.nsb*bentAreaOne,sinTheta=Math.sin(p.theta*Math.PI/180);
+    const tensionForce=1e-3*p.fsd*bentArea,verticalForce=tensionForce*sinTheta,Vsb=.75*verticalForce,Vu=Vcs+Vsb;
+    const minimumVcs=.6*p.demand,maximumCreditedVsb=.4*p.demand,creditedVsb=Math.min(Vsb,maximumCreditedVsb),creditedTotal=Vcs+creditedVsb;
+    const vcsCondition=Vcs+1e-9>=minimumVcs,creditedSumCondition=creditedTotal+1e-9>=p.demand,requiredBent=Math.max(0,p.demand-Vcs);
+    const sectionLimit=.51e-3*Math.sqrt(p.fcu)*p.b*p.h0,sectionCondition=p.demand<=sectionLimit+1e-9;
+    const minRho=.0011,spacingLimit=p.location==='support'?Math.min(100,p.h/2,400):Math.min(p.h/2,400),minimumDiameter=Math.max(8,25/4);
+    const rhoCondition=rhoSv+1e-12>=minRho,spacingCondition=p.s<=spacingLimit+1e-9,diameterCondition=p.dsv+1e-9>=minimumDiameter,constructionCondition=rhoCondition&&spacingCondition&&diameterCondition;
+    const capacityCondition=vcsCondition&&creditedSumCondition;
+    return {parameters:p,stirrupAreaOne,stirrupArea,rhoSv,Praw,P,Pcapped:Praw>2.5,radicand,Vcs,bentAreaOne,bentArea,sinTheta,tensionForce,verticalForce,Vsb,Vu,minimumVcs,maximumCreditedVsb,creditedVsb,creditedTotal,uncreditedVsb:Math.max(0,Vsb-creditedVsb),vcsCondition,creditedSumCondition,requiredBent,capacityCondition,sectionLimit,sectionCondition,minRho,spacingLimit,minimumDiameter,rhoCondition,spacingCondition,diameterCondition,constructionCondition,rawExceedsSectionLimit:Vu>sectionLimit+1e-9,rawSumCondition:Vu+1e-9>=p.demand,conditionsMet:capacityCondition&&sectionCondition&&constructionCondition};
+  }
+  if(!root){window.rebarCalculation={calculate};return;}
+  const storageKey='concrete-rebar-calculation-20261011-v1',modes=['stirrups','bent','check'];
+  const f=(n,d=3)=>(Math.abs(n)<.5*10**-d?0:n).toFixed(d);
+  const controls={dsv:'rc-dsv',nsv:'rc-nsv',s:'rc-s',nsb:'rc-nsb',dsb:'rc-dsb',theta:'rc-theta',location:'rc-location'};
+  let activeMode='stirrups',manualOpen=false,lastBand=null,queued=false,queryPending=true,pendingScroll=false;
+  function reading(){
+    const parameters={};for(const [key,id] of Object.entries(controls))parameters[key]=key==='location'?$(id).value:Number($(id).value);
+    const result=calculate(parameters),api=window.guidedLesson,stage=api&&api.state?api.state.stage:null,reveal=api&&api.values?Number(api.values[6]):0;
+    return {...result,stage,reveal,mode:activeMode,visible:stage===6&&(manualOpen||reveal>=4),answerStirrups:$('rc-answer-stirrups').value,answerBent:$('rc-answer-bent').value};
+  }
+  function status(text,error=false){$('rc-save-status').textContent=text;$('rc-save-status').dataset.error=String(error);}
+  function save(){const r=reading();try{localStorage.setItem(storageKey,JSON.stringify({version:1,parameters:Object.fromEntries(Object.keys(controls).map(key=>[key,r.parameters[key]])),answerStirrups:r.answerStirrups,answerBent:r.answerBent}));status('输入与回答已保存在当前浏览器；没有提交给老师。');}catch(error){status('当前浏览器不能自动保存，请下载计算与回答保留记录。',true);}}
+  function restore(){try{const s=JSON.parse(localStorage.getItem(storageKey)||'null');if(s&&s.version===1){for(const [key,id] of Object.entries(controls))if(s.parameters&&((key==='location'&&['general','support'].includes(s.parameters[key]))||(typeof s.parameters[key]==='number'&&Number.isFinite(s.parameters[key])))){const node=$(id),old=node.value;node.value=String(s.parameters[key]);if(node.value==='')node.value=old;}if(typeof s.answerStirrups==='string')$('rc-answer-stirrups').value=s.answerStirrups;if(typeof s.answerBent==='string')$('rc-answer-bent').value=s.answerBent;}}catch(error){status('当前浏览器不能读取自动保存内容，可继续计算并下载本次记录。',true);}}
+  function open(mode='stirrups',options={}){
+    if(mode==='total')mode='check';if(!modes.includes(mode))mode='stirrups';
+    activeMode=mode;manualOpen=true;lastBand=mode==='stirrups'?4:5;pendingScroll=options.scroll!==false;
+    const api=window.guidedLesson;if(api){if(api.state.stage!==6)api.show(6);api.update(lastBand);}
+    schedule();return reading();
+  }
+  function steps(id,lines){const nodes=lines.map(text=>{const li=document.createElement('li');li.textContent=text;return li;});$(id).replaceChildren(...nodes);}
+  function drawStirrups(r){
+    const p=r.parameters,blue='#226782',parts=[];
+    parts.push('<text x="36" y="22" fill="#55798a" font-size="12">横截面：面积与有效高度</text><rect x="45" y="43" width="90" height="172" fill="#f4f8fa" stroke="#aec4d0"/><rect x="53" y="52" width="74" height="155" rx="7" fill="none" stroke="'+blue+'" stroke-width="'+f(p.dsv/4,1)+'"/>');
+    if(p.nsv===4)parts.push('<path d="M78 52V207M102 52V207" stroke="'+blue+'" stroke-width="'+f(p.dsv/4,1)+'"/>');
+    for(const x of [57,79,101,123])parts.push('<circle cx="'+x+'" cy="202.1" r="4.3" fill="#a9633e"/>');
+    parts.push('<circle cx="58" cy="60" r="3" fill="#a9bac4"/><circle cx="122" cy="60" r="3" fill="#a9bac4"/><path d="M20 43V215M15 43H25M15 215H25" stroke="#91aab7" fill="none"/><text x="13" y="136" transform="rotate(-90 13 136)" text-anchor="middle" fill="#55798a" font-size="10">h = 800 mm</text><path d="M153 43V202.1M148 43H158M148 202.1H158" stroke="'+blue+'" fill="none"/><text x="167" y="123" transform="rotate(-90 167 123)" text-anchor="middle" fill="'+blue+'" font-size="10">h₀ = 740 mm</text><path d="M45 233H135M45 228V238M135 228V238" stroke="#91aab7"/><text x="90" y="249" text-anchor="middle" fill="#55798a" font-size="10">b = 420 mm</text>');
+    parts.push('<text x="225" y="22" fill="#55798a" font-size="12">梁侧面：间距 s 沿梁长量</text><path d="M235 43H515M508 38L515 43L508 48" stroke="#91aab7" fill="none"/><rect x="225" y="70" width="305" height="110" rx="3" fill="#f4f8fa" stroke="#c5d7e1"/>');
+    const step=p.s/2000*280;let count=0;
+    for(let x=238;x<=518+1e-9;x+=step){parts.push('<path d="M'+f(x,2)+' 76V175" stroke="'+blue+'" stroke-width="'+f(p.dsv/4,1)+'"/>');count++;}
+    parts.push('<path d="M320 180L410 70" fill="none" stroke="#c75b38" stroke-width="3" stroke-dasharray="5 3"/>');
+    const sx=238+step*2;
+    parts.push('<path d="M'+f(sx,2)+' 194H'+f(sx+step,2)+'M'+f(sx,2)+' 189V199M'+f(sx+step,2)+' 189V199" stroke="'+blue+'"/><text x="385" y="215" text-anchor="middle" fill="'+blue+'" font-size="12">s = '+p.s+' mm · '+p.nsv+' 肢 Φ'+p.dsv+'</text><circle cx="237" cy="239" r="6" fill="'+blue+'"/><text x="253" y="243" fill="#55798a" font-size="11">单肢截面 Φ'+p.dsv+'；Asv = n × πdsv²/4</text><text x="253" y="259" fill="#78909d" font-size="10">红点：保留纵筋合力位置 · 斜虚线：裂缝示意</text>');
+    $('rc-stirrup-diagram').innerHTML='<g font-family="Microsoft YaHei,sans-serif">'+parts.join('')+'</g>';
+    $('rc-stirrup-diagram').dataset.drawnStirrups=String(count);
+  }
+  function drawBent(r){
+    const p=r.parameters,a=p.theta*Math.PI/180,L=126,ox=345,oy=133,ex=ox-L*Math.cos(a),ey=oy-L*Math.sin(a),opacity=p.nsb===0?.18:1,parts=[];
+    parts.push('<defs><marker id="rc-t-arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#ac7d20"/></marker><marker id="rc-v-arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#226782"/></marker></defs><rect x="28" y="29" width="504" height="118" rx="3" fill="#f5f9fb" stroke="#c5d7e1"/><path d="M190 147L316 29" fill="none" stroke="#c75b38" stroke-width="3" stroke-dasharray="5 3"/>');
+    for(let i=0;i<p.nsb;i++){const off=(i-(p.nsb-1)/2)*4;parts.push('<path d="M450 '+(oy+off)+'H'+ox+'L'+f(ex,2)+' '+f(ey+off,2)+'H110" fill="none" stroke="#ac7d20" stroke-width="2.2" opacity=".65"/>');}
+    parts.push('<path d="M219 133H345" stroke="#9cb2bf" stroke-dasharray="3 3"/><path d="M320 133A25 25 0 0 1 '+f(ox-25*Math.cos(a),2)+' '+f(oy-25*Math.sin(a),2)+'" fill="none" stroke="#9a7a33"/><text x="298" y="123" fill="#9a7a33" font-size="11">θs</text><text x="218" y="145" fill="#708b9a" font-size="10">水平梁长方向</text>');
+    parts.push('<g opacity="'+opacity+'"><path d="M'+ox+' '+oy+'L'+f(ex,2)+' '+f(ey,2)+'" stroke="#ac7d20" stroke-width="3" marker-end="url(#rc-t-arrow)"/><path d="M'+ox+' '+oy+'V'+f(ey,2)+'" stroke="#226782" stroke-width="2.5" marker-end="url(#rc-v-arrow)"/><path d="M'+f(ex,2)+' '+f(ey,2)+'H'+ox+'" fill="none" stroke="#91acba" stroke-dasharray="4 3"/></g><text x="35" y="18" fill="#5a7889" font-size="12">同一平面 '+p.nsb+'Φ'+p.dsb+' · θs = '+p.theta+'°</text><text x="366" y="'+f((oy+ey)/2,2)+'" fill="#226782" font-size="12">T sinθs</text><text x="'+f(ex-12,2)+'" y="'+f(ey-8,2)+'" fill="#9b741e" text-anchor="end" font-size="12">T = '+f(r.tensionForce,1)+' kN</text><text x="35" y="174" fill="#55798a" font-size="11">T sinθs = '+f(r.verticalForce,2)+' kN；Vsb = 0.75 T sinθs = '+f(r.Vsb,2)+' kN</text>');
+    $('rc-bent-diagram').innerHTML='<g font-family="Microsoft YaHei,sans-serif">'+parts.join('')+'</g>';
+  }
+  function drawTotal(r){const max=Math.max(r.parameters.demand,r.Vu,r.creditedTotal)*1.08,scale=450/max,x=65,w1=r.Vcs*scale,w2=r.Vsb*scale,wc=r.creditedVsb*scale,d=x+r.parameters.demand*scale;const row=(y,bent)=>'<rect x="'+x+'" y="'+y+'" width="'+f(w1,2)+'" height="19" fill="#226782"/><rect x="'+f(x+w1,2)+'" y="'+y+'" width="'+f(bent,2)+'" height="19" fill="#b58a32"/>';$('rc-total-diagram').innerHTML='<g font-family="Microsoft YaHei,sans-serif" font-size="11"><text x="12" y="45" fill="#55798a">原和式</text>'+row(31,w2)+'<text x="12" y="88" fill="#55798a">计入后</text>'+row(74,wc)+'<path d="M'+f(d,2)+' 24V102" stroke="#bb6042" stroke-width="1.8" stroke-dasharray="4 3"/><text x="'+f(d,2)+'" y="17" fill="#a85436" text-anchor="middle">需求 '+r.parameters.demand+' kN</text><text x="65" y="121" fill="#226782">蓝：混凝土 + 箍筋 Vcs</text><text x="300" y="121" fill="#a17b27">金：弯起筋 Vsb</text></g>';}
+  function render(){
+    queued=false;
+    const api=window.guidedLesson;
+    if(queryPending&&api){queryPending=false;const mode=new URLSearchParams(location.search).get('rebar');if(modes.includes(mode)){open(mode);return;}}
+    let r=reading();root.hidden=r.stage!==6;if(r.stage!==6){lastBand=null;manualOpen=false;return;}
+    const band=r.reveal>=5?5:r.reveal>=4?4:0;
+    if(band!==lastBand){if(band>=4){activeMode=band===4?'stirrups':'bent';manualOpen=true;}lastBand=band;}
+    r=reading();$('rc-work').hidden=!r.visible;$('rc-wait').hidden=r.visible;
+    for(const mode of modes){const active=r.visible&&activeMode===mode;$('rc-tab-'+mode).setAttribute('aria-selected',String(active));$('rc-tab-'+mode).tabIndex=active||!r.visible?0:-1;$('rc-panel-'+mode).hidden=!active;}
+    const p=r.parameters;
+    $('rc-compact-check').textContent=(p.location==='support'?'近支点 h 范围':'一般梁段')+' · 已列构造条件'+(r.constructionCondition?'满足':'不足')+'：ρsv = '+f(r.rhoSv*100,4)+'%（至少 0.11%），s = '+p.s+' mm（不大于 '+f(r.spacingLimit,0)+' mm）。';
+    $('rc-compact-check').style.color=r.constructionCondition?'#417669':'#9a6036';
+    $('rc-dsv-label').textContent=p.dsv+' mm';$('rc-s-label').textContent=p.s+' mm';$('rc-nsb-label').textContent=p.nsb+' 根';$('rc-theta-label').textContent=p.theta+'°';
+    $('rc-rho').textContent=f(r.rhoSv*100,4)+'%';$('rc-P').textContent=f(r.P,4);$('rc-P-label').textContent='P · 百分数值（纵筋率 '+f(r.Praw,4)+'%）';$('rc-vcs').textContent=f(r.Vcs)+' kN';$('rc-area-bent').textContent=f(r.bentArea)+' mm²';$('rc-vertical-force').textContent=f(r.verticalForce)+' kN';$('rc-vsb').textContent=f(r.Vsb)+' kN';
+    steps('rc-stirrup-steps',[
+      '每肢面积 = π × '+p.dsv+'² / 4 = '+f(r.stirrupAreaOne)+' mm²；n = '+p.nsv+'，全部肢面积 Asv = '+f(r.stirrupArea)+' mm²。',
+      'ρsv = '+f(r.stirrupArea)+' / ('+p.b+' × '+p.s+') = '+f(r.rhoSv,9)+'，即 '+f(r.rhoSv*100,4)+'%；公式中代入小数 '+f(r.rhoSv,9)+'。',
+      'P原值 = 100 × '+f(p.As)+' / ('+p.b+' × '+p.h0+') = '+f(r.Praw,6)+'；取 min(P原值, 2.5) = '+f(r.P,6)+'（百分数值）。',
+      '根号内 = (2 + 0.6 × '+f(r.P,6)+') × √'+p.fcu+' × '+f(r.rhoSv,9)+' × '+p.fsv+' = '+f(r.radicand,6)+'。',
+      'Vcs = 0.45 × 10⁻³ × 1 × 1 × 1 × '+p.b+' × '+p.h0+' × √'+f(r.radicand,6)+' = '+f(r.Vcs)+' kN。'
+    ]);
+    steps('rc-bent-steps',[
+      '同一平面 ΣAsb = '+p.nsb+' × π × '+p.dsb+'² / 4 = '+f(r.bentArea)+' mm²。',
+      '按 fsd 计的设计拉力能力 T = fsd ΣAsb / 1000 = '+p.fsd+' × '+f(r.bentArea)+' / 1000 = '+f(r.tensionForce)+' kN。',
+      '竖向分量 T sinθs = '+f(r.tensionForce)+' × sin'+p.theta+'° = '+f(r.verticalForce)+' kN。',
+      'Vsb = 0.75 × '+f(r.verticalForce)+' = '+f(r.Vsb)+' kN。'
+    ]);
+    $('rc-total-substitution').textContent='原始公式和式：Vu = '+f(r.Vcs)+' + '+f(r.Vsb)+' = '+f(r.Vu)+' kN；课堂给定需分担剪力 = '+p.demand+' kN。';
+    $('rc-vu').textContent=f(r.Vu)+' kN';$('rc-credited-bent').textContent=f(r.creditedVsb)+' kN';$('rc-credited-total').textContent=f(r.creditedTotal)+' kN';
+    $('rc-check-vcs').dataset.met=String(r.vcsCondition);$('rc-check-vcs').textContent='混凝土 + 箍筋：Vcs = '+f(r.Vcs)+' kN '+(r.vcsCondition?'≥':'<')+' 60% × '+p.demand+' = '+f(r.minimumVcs)+' kN，'+(r.vcsCondition?'本题分担条件满足。':'本题分担不足。');
+    $('rc-check-bent').dataset.met='true';$('rc-check-bent').textContent='弯起筋：公式贡献 '+f(r.Vsb)+' kN；本题计入上限 '+f(r.maximumCreditedVsb)+' kN，允许用于本题可行性检验的计入能力 '+f(r.creditedVsb)+' kN'+(r.uncreditedVsb>1e-9?'；超出 '+f(r.uncreditedVsb)+' kN 不计入本次需求分担。':'。');
+    $('rc-check-required-bent').dataset.met=String(r.creditedSumCondition);$('rc-check-required-bent').textContent='先用 Vcs 后，还需弯起筋至少 max(0, D − Vcs) = '+f(r.requiredBent)+' kN；'+(r.creditedSumCondition?'不超过当前可计入能力。按和式能力可分配 '+f(Math.min(r.Vcs,p.demand))+' + '+f(r.requiredBent)+' = '+f(p.demand)+' kN（构造另看下方）。':'超过当前可计入能力。')+' 不强制恰好分配为 60/40。';
+    $('rc-check-sum').dataset.met=String(r.creditedSumCondition);$('rc-check-sum').textContent='本题计入后：'+f(r.Vcs)+' + '+f(r.creditedVsb)+' = '+f(r.creditedTotal)+' kN '+(r.creditedSumCondition?'≥':'<')+' '+p.demand+' kN。';
+    $('rc-check-section').dataset.met=String(r.sectionCondition);$('rc-check-section').textContent='截面条件：D = '+f(p.demand)+' kN '+(r.sectionCondition?'≤':'>')+' 0.51 × 10⁻³ √'+p.fcu+' × '+p.b+' × '+p.h0+' = '+f(r.sectionLimit)+' kN；比较给定设计需求 D。';
+    $('rc-check-rho').dataset.met=String(r.rhoCondition);$('rc-check-rho').textContent='HRB400 最小配箍率：'+f(r.rhoSv*100,4)+'% '+(r.rhoCondition?'≥':'<')+' 0.11%，'+(r.rhoCondition?'满足':'不足')+'。';
+    $('rc-check-spacing').dataset.met=String(r.spacingCondition);$('rc-check-spacing').textContent=(p.location==='support'?'近支点向跨内不少于 h = '+p.h+' mm 范围：':'一般梁段：')+'s = '+p.s+' mm '+(r.spacingCondition?'≤':'>')+' '+f(r.spacingLimit,0)+' mm，'+(r.spacingCondition?'满足':'不足')+'。'+(p.location==='general'?' 上限 min(h/2, 400 mm)。':' 本练习采用近支点 100 mm 间距限值。');
+    $('rc-check-diameter').dataset.met=String(r.diameterCondition);$('rc-check-diameter').textContent='箍筋直径：Φ'+p.dsv+' '+(r.diameterCondition?'≥':'<')+' max(8, 25/4) = 8 mm，'+(r.diameterCondition?'满足':'不足')+'。';
+    $('rc-result').dataset.met=String(r.conditionsMet);$('rc-result').textContent=r.conditionsMet?'本题已列条件满足；完整设计仍需核查其余条件。':'本题已列条件不足；请检查和式、截面或构造项目，并继续核查其余条件。';
+    $('rc-section-caption').textContent=r.rawExceedsSectionLimit?'当前原始和式超过截面限值，不能把该和式当作可实现的最终抗剪能力；当前截面条件比较的仍是设计需求 D，而不是原始和式。':'原始公式和式是分项公式的计算结果；截面条件比较的是设计需求 D，不能把和式直接当作已实现的整梁最终抗剪能力。';
+    drawStirrups(r);drawBent(r);drawTotal(r);
+    if(pendingScroll){pendingScroll=false;root.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
+  }
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(render);}
+  root.addEventListener('click',event=>{const b=event.target.closest('button[data-rc-mode]');if(b)open(b.dataset.rcMode,{scroll:false});});
+  root.querySelector('.rc-tabs').addEventListener('keydown',event=>{const button=event.target.closest('[role="tab"]');if(!button)return;let index=modes.indexOf(button.dataset.rcMode);if(event.key==='ArrowRight')index=(index+1)%3;else if(event.key==='ArrowLeft')index=(index+2)%3;else return;event.preventDefault();open(modes[index],{scroll:false});$('rc-tab-'+modes[index]).focus();});
+  for(const id of Object.values(controls)){for(const type of ['input','change'])$(id).addEventListener(type,()=>{save();schedule();});}
+  for(const id of ['rc-answer-stirrups','rc-answer-bent'])$(id).addEventListener('input',save);
+  function recordText(){const r=reading(),p=r.parameters;return [
+    '箍筋与弯起筋 · 公式和数值实验记录','导出时间：'+new Date().toLocaleString('zh-CN'),'本机记录，未提交给老师。','',
+    '课堂给定设计需求 D='+p.demand+' kN（gamma0已并入）；独立于上方40 kN荷载弹性模型，不表示已选规范控制截面。',
+    '课堂条件：b='+p.b+' mm，h='+p.h+' mm，h0='+p.h0+' mm，As='+f(p.As)+' mm²，fcu,k='+p.fcu+' MPa，fsv=fsd=330 MPa（HRB400），alpha1=alpha2=alpha3=1。','',
+    '1. 箍筋：'+p.nsv+'肢 Φ'+p.dsv+' @ '+p.s+' mm。','ρsv=nπdsv²/(4bs)='+f(r.rhoSv,9)+'='+f(r.rhoSv*100,4)+'%。',
+    'P=min(100As/(bh0),2.5)='+f(r.P,6)+'（原值'+f(r.Praw,6)+'）。',
+    'Vcs=0.45×10^-3 α1α2α3 b h0 √[(2+0.6P)√fcu,k ρsv fsv]='+f(r.Vcs)+' kN。',
+    '问题1：间距从200改400时ρsv与Vcs如何变化？为什么只增加纵筋不能替代这一步？','我的回答：'+(r.answerStirrups.trim()||'（未填写）'),'',
+    '2. 弯起筋：同一平面'+p.nsb+'Φ'+p.dsb+'，θs='+p.theta+'°。','ΣAsb='+f(r.bentArea)+' mm²，T='+f(r.tensionForce)+' kN，Tsinθs='+f(r.verticalForce)+' kN。',
+    'Vsb=0.75×10^-3 fsd ΣAsb sinθs='+f(r.Vsb)+' kN。',
+    '问题2：根数或角度改变哪一项？公式和式大于需求就能判断整梁安全吗？','我的回答：'+(r.answerBent.trim()||'（未填写）'),'',
+    '3. 合计：Vu=Vcs+Vsb='+f(r.Vu)+' kN。','混凝土+箍筋最低分担='+f(r.minimumVcs)+' kN；弯起筋本题计入上限='+f(r.maximumCreditedVsb)+' kN。',
+    '弯起筋计入='+f(r.creditedVsb)+' kN，未计入超出部分='+f(r.uncreditedVsb)+' kN；计入后和式='+f(r.creditedTotal)+' kN。',
+    '先用Vcs后还需弯起筋至少='+f(r.requiredBent)+' kN；可计入值表示能力上限，不是实际强制分配比例。',
+    '截面限值='+f(r.sectionLimit)+' kN；D与限值比较：'+(r.sectionCondition?'满足':'不足')+'。',
+    '验算位置：'+(p.location==='support'?'近支点h范围':'一般梁段')+'；最小配箍率0.11%；间距上限='+f(r.spacingLimit,0)+' mm；最小直径8 mm。',
+    '构造条件：配箍率'+(r.rhoCondition?'满足':'不足')+'，间距'+(r.spacingCondition?'满足':'不足')+'，直径'+(r.diameterCondition?'满足':'不足')+'。',
+    '本题已列条件：'+(r.conditionsMet?'满足':'不足')+'；完整设计仍需核查控制截面、构造适用范围、锚固、弯起点及抗弯等条件。',
+    '改变弯起筋时验算处As保持不变；若从原纵筋弯起，抗弯、支座贯通及锚固另核。',
+    '来源：JTG3362—2018，第5.2.9条（PDF35页）、第5.2.13(1)条（PDF37页）、第9.3.10/9.3.12条（PDF113/114页）、表3.2.3-1。'
+  ].join('\n');}
+  $('rc-download').addEventListener('click',()=>{try{const url=URL.createObjectURL(new Blob(['\uFEFF',recordText()],{type:'text/plain;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='箍筋与弯起筋-计算与回答.txt';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);status('已生成计算与回答下载，请查看浏览器下载列表。');}catch(error){status('下载未完成，可选中计算与回答文字手动复制保存。',true);}});
+  const observer=new MutationObserver(schedule);if($('gd-value'))observer.observe($('gd-value'),{childList:true,subtree:true,characterData:true});
+  window.addEventListener('guided-stage-change',schedule);window.addEventListener('load',schedule,{once:true});
+  window.rebarCalculation={calculate,reading,refresh:schedule,open,recordText,defaults:DEFAULTS};
   restore();schedule();
 })();
 
