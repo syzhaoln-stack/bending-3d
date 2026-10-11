@@ -44,7 +44,7 @@ THE SOFTWARE.
 .prerequisite-link{display:inline-block;margin-top:8px;font-size:11px}.bend-workbench{display:grid;grid-template-columns:minmax(240px,340px) minmax(0,1fr);gap:24px;align-items:center;margin:0 0 15px;padding:13px 20px;border:1px solid #e5d7b8;border-radius:12px;background:#fffdf8}.moment-caption{font-size:10px;color:#6e6251;display:flex;justify-content:space-between;gap:8px}.moment-figure{width:100%;height:114px;max-width:340px}.moment-figure text{font-family:"Microsoft YaHei UI",sans-serif}.bend-stage{font-size:12px;font-weight:600;line-height:1.6;color:#755313;margin-bottom:8px}.bend-transport{display:flex;align-items:center;gap:9px}.bend-transport input{accent-color:var(--bent);flex:1}.bend-transport output{color:#8a6219;min-width:38px;font-size:12px;font-family:Consolas,monospace;text-align:right}.bend-transport button{background:#fff;border:1px solid #dfcfae;border-radius:7px;padding:6px 12px;font-size:11px;white-space:nowrap}.bend-caveat{font-size:10px;line-height:1.7;color:#786c59;margin-top:8px}.bend-caveat strong{font-weight:600;color:#6b5837}@media(max-width:650px){.bend-workbench{grid-template-columns:1fr;gap:6px;padding:12px 14px}.moment-figure{height:99px;margin:auto}.bend-transport{gap:6px}.bend-transport button{font-size:10px;padding:6px 8px}.bend-stage{font-size:11px}.bend-caveat{font-size:9px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
-<meta name="classroom-version" content="2026-10-08-guided-inquiry">
+<meta name="classroom-version" content="2026-10-11-quantitative-inquiry">
 </head>
 <body data-mode="point" data-course="guided">
 <style>
@@ -138,40 +138,122 @@ body:not([data-course="guided"])>#gd-root{display:none}
       <svg id="gd-mini-moment" class="gd-mini-moment" viewBox="0 0 900 110" role="img" aria-label="弯起钢筋时保留同一根梁的弯矩图"></svg></div>
     <div class="gd-control"><div class="gd-control-top"><label id="gd-control-label" for="gd-control">截面位置</label><div class="gd-control-readout"><button id="gd-actual" type="button" hidden>恢复实际变形</button><output id="gd-value" for="gd-control">x = 0.00 m</output></div></div><input id="gd-control" type="range" min="-2.7" max="2.7" step="0.01" value="0"><div id="gd-endpoints" class="gd-endpoints"><span>左支座</span><span>右支座</span></div><div id="gd-ticks" class="gd-ticks" hidden></div></div>
   </section>
+  <style>
+#qe-root{--qe-ink:#243e4b;--qe-blue:#226782;--qe-muted:#69808c;--qe-line:#dce6eb;--qe-pale:#f1f7fa;margin:0 0 16px;border:1px solid var(--qe-line);border-radius:10px;background:#fff;color:var(--qe-ink);font-family:"Microsoft YaHei",system-ui,sans-serif;overflow:hidden}
+#qe-root *{box-sizing:border-box}#qe-root [hidden]{display:none!important}.qe-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 15px;border-bottom:1px solid var(--qe-line);background:#f7fafc}.qe-badge{font-size:11px;letter-spacing:.06em;font-weight:650;color:var(--qe-blue)}.qe-scope{font-size:10px;line-height:1.7;color:var(--qe-muted);margin:0}.qe-main{padding:13px 15px 11px}.qe-kicker{display:block;font:11px Consolas,"Microsoft YaHei",sans-serif;color:var(--qe-muted);margin-bottom:5px}#gd-root #qe-core,#qe-root #qe-core{font-size:15px;font-weight:650;line-height:1.8;margin:0 0 10px;color:var(--qe-ink)}.qe-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px}.qe-metric{min-width:0;padding:9px 11px;border-radius:6px;background:var(--qe-pale)}.qe-metric-label{display:block;font-size:10px;line-height:1.6;color:var(--qe-muted);margin-bottom:3px}.qe-metric output{display:block;font:14px/1.7 Consolas,"Microsoft YaHei",sans-serif;color:var(--qe-blue);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.qe-position{font-size:11px;color:var(--qe-muted);line-height:1.8;margin:8px 0 0}.qe-warning{font-size:11px;line-height:1.8;margin:7px 0 0;color:#9c5b2f;background:#fff8ef;border-left:3px solid #d4ae76;padding:7px 10px}.qe-chain{margin:0 15px 12px;border-top:1px solid var(--qe-line);padding-top:3px}.qe-layer{font-size:12px;line-height:1.9}.qe-layer>summary{cursor:pointer;min-height:40px;padding:9px 0;color:var(--qe-blue);font-weight:600}.qe-layer>p{margin:0 0 9px;color:#4e6d7d}.qe-layer .qe-layer{margin:6px 0 9px 5px;padding-left:13px;border-left:2px solid #c7dce6}.qe-formula{white-space:pre-line;overflow-wrap:anywhere;background:#f7fafc;border:1px solid #e2ebf0;border-radius:5px;padding:9px 11px;font:12px/1.9 Consolas,"Microsoft YaHei",sans-serif!important;color:#355d73!important}.qe-next{border-top:1px dashed #ccdee7;padding-top:9px;color:var(--qe-blue)!important}.qe-next strong{font-size:11px;margin-right:5px}.qe-footnote{font-size:9px;color:#7d929d;line-height:1.8;margin:0;padding:9px 15px;border-top:1px solid #edf2f5}
+#qe-root summary:focus-visible{outline:3px solid #61a1bd;outline-offset:2px;border-radius:3px}
+@media(max-width:560px){.qe-header{display:block;padding:9px 12px}.qe-scope{margin-top:4px;font-size:9px}.qe-main{padding:11px 12px 10px}#gd-root #qe-core,#qe-root #qe-core{font-size:13px}.qe-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.qe-metric{padding:7px 9px}.qe-metric output{font-size:12px}.qe-metric-label{font-size:9px}.qe-chain{margin:0 12px 9px}.qe-layer{font-size:11px}.qe-layer>summary{min-height:44px;padding:10px 0}.qe-layer .qe-layer{padding-left:9px;margin-left:2px}.qe-formula{font-size:10px!important;padding:8px}.qe-position,.qe-warning{font-size:10px}.qe-footnote{padding:8px 12px;font-size:9px}}
+</style>
+<section id="qe-root" aria-labelledby="qe-core">
+  <div class="qe-header"><span class="qe-badge">用数值解释 · 一层层追问</span><p class="qe-scope">跟随上方操作同步读数 · 展开问题，再看解释</p></div>
+  <div class="qe-main"><span id="qe-kicker" class="qe-kicker">本幅核心问题</span><h2 id="qe-core">模型准备好后，关键数值会随当前控件同步显示。</h2><div id="qe-metrics" class="qe-metrics" aria-label="当前模型的关键数值"></div><p id="qe-position" class="qe-position"></p><p id="qe-warning" class="qe-warning" hidden></p></div>
+  <div class="qe-chain">
+    <details id="qe-layer-1" class="qe-layer"><summary>1 · 先判断</summary><p id="qe-predict"></p>
+      <details id="qe-layer-2" class="qe-layer"><summary>2 · 动手验证</summary><p id="qe-action"></p>
+        <details id="qe-layer-3" class="qe-layer"><summary>3 · 数值解释与下一问</summary><p id="qe-formula" class="qe-formula"></p><p id="qe-explain"></p><p class="qe-next"><strong>下一问</strong><span id="qe-next"></span></p></details>
+      </details>
+    </details>
+  </div>
+  <p class="qe-footnote">单位约定：几何用 m，内力用 kN、kN·m，应力用 MPa；拉应力为正。角度说明与本幅数值一起显示。数值用于解释弹性受力，不能代替抗剪承载力与构造验算。</p>
+</section>
+
   <div class="gd-bottom"><p id="gd-caption" class="gd-caption">剪力图、弯矩图与蓝色截面始终对齐。</p><nav class="gd-nav" aria-label="场景顺序"><button id="gd-prev" type="button" disabled>上一幅</button><button id="gd-next" type="button">下一幅 · 正应力</button></nav></div>
+  <style>
+#ts-root{--ts-blue:#226782;--ts-ink:#243e4b;--ts-muted:#69808c;--ts-line:#dce6eb;--ts-pale:#f1f7fa;margin:18px 0 0;color:var(--ts-ink);font-family:"Microsoft YaHei",system-ui,sans-serif}#ts-root[hidden],#ts-root [hidden]{display:none!important}#ts-root *{box-sizing:border-box}#ts-root .ts-chain{border:1px solid var(--ts-line);border-radius:9px;background:#fff;font-size:12px;line-height:1.9;overflow:hidden}#ts-open{padding:14px 17px;min-height:46px;cursor:pointer;color:var(--ts-blue);font-size:14px;font-weight:650;background:#f7fafc}#ts-root .ts-body{padding:0 17px 14px}#ts-root .ts-source{font-size:10px;color:var(--ts-muted);line-height:1.8;margin:12px 0 10px}#ts-root .ts-context{margin:10px 0;background:var(--ts-pale);padding:9px 11px;border-left:3px solid #8eb6ca;font-size:11px}#ts-root .ts-question{font-size:14px;font-weight:600;line-height:1.8;margin:15px 0 8px}#ts-root .ts-copy{font-size:12px;line-height:1.9;margin:7px 0;color:#4f7080}#ts-root .ts-formula{font:13px/1.9 Consolas,"Microsoft YaHei",sans-serif;color:var(--ts-blue);white-space:pre-line;overflow-wrap:anywhere;margin:9px 0;padding:9px 11px;border:1px solid #e1ebf0;border-radius:5px;background:#fbfdfe}#ts-root .ts-slider-label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:13px 0 2px;font-size:12px;color:var(--ts-ink)}#ts-root .ts-slider-label output{font:14px Consolas,"Microsoft YaHei",sans-serif;color:var(--ts-blue);white-space:nowrap}#ts-root input[type="range"]{display:block;width:100%;height:34px;accent-color:var(--ts-blue);cursor:ew-resize;margin:0;touch-action:pan-y}#ts-root .ts-endpoints{display:flex;justify-content:space-between;color:var(--ts-muted);font-size:10px;margin:0 0 9px}#ts-root .ts-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:9px 0}#ts-root .ts-metric{background:var(--ts-pale);border-radius:6px;padding:9px 11px;min-width:0}#ts-root .ts-metric span{display:block;font-size:10px;color:var(--ts-muted);line-height:1.7}#ts-root .ts-metric output{display:block;font:15px/1.8 Consolas,"Microsoft YaHei",sans-serif;color:var(--ts-blue);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}#ts-root .ts-status{margin:10px 0;font-size:11px;line-height:1.9;padding:8px 11px;border:1px solid #c6e0d9;border-radius:6px;background:#f4faf8;color:#397368}#ts-root .ts-status[data-mismatch="true"]{border-color:#ead3b5;background:#fff8ef;color:#955d30}#ts-root .ts-layer{border-top:1px solid var(--ts-line);margin-top:14px;padding-top:3px}#ts-root .ts-layer>summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ts-blue);padding:10px 0;min-height:44px}#ts-root .ts-layer .ts-layer{margin-left:3px;padding-left:12px;border-left:2px solid #c8dce6}#ts-root .ts-presets{display:flex;gap:6px;flex-wrap:wrap;margin:5px 0 9px}#ts-root button{font:12px "Microsoft YaHei",system-ui,sans-serif;padding:8px 12px;min-height:42px;color:var(--ts-blue);border:1px solid #bfd5e0;background:#fff;border-radius:6px;cursor:pointer}#ts-root button:hover{background:#f1f7fa}#ts-root button[aria-pressed="true"]{background:#e5f1f7;border-color:#79a9bf}#ts-root label.ts-answer-label{display:block;font-size:11px;color:var(--ts-muted);margin:9px 0 5px}#ts-root textarea{width:100%;display:block;min-height:115px;padding:10px 12px;border:1px solid #c9dce6;border-radius:6px;color:var(--ts-ink);font:13px/1.8 "Microsoft YaHei",system-ui,sans-serif;resize:vertical}#ts-root textarea::placeholder{color:#8a9fa9}#ts-root .ts-reference{font-size:11px;line-height:1.9;margin:10px 0;color:#527382}#ts-root .ts-reference summary{cursor:pointer;color:var(--ts-blue);min-height:40px;padding:8px 0}#ts-root .ts-reference p{margin:6px 0;padding:9px 11px;background:#f7fafc;border-left:3px solid #a2c1d0}#ts-root .ts-record{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 0 0}#ts-root .ts-record p{margin:0;font-size:10px;line-height:1.8;color:var(--ts-muted)}#ts-root #ts-download{background:var(--ts-blue);border-color:var(--ts-blue);color:#fff;white-space:nowrap}#ts-root #ts-save-status{font-size:10px;line-height:1.8;color:var(--ts-muted);margin:7px 0 0}#ts-root #ts-save-status[data-error="true"]{color:#a25c32}#ts-root summary:focus-visible,#ts-root input:focus-visible,#ts-root button:focus-visible,#ts-root textarea:focus-visible{outline:3px solid #61a1bd;outline-offset:3px}
+@media(max-width:560px){#ts-open{font-size:12px;padding:12px;line-height:1.8}#ts-root .ts-body{padding:0 12px 12px}#ts-root .ts-question{font-size:12px}#ts-root .ts-copy{font-size:11px}#ts-root .ts-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}#ts-root .ts-metric{padding:8px 9px}#ts-root .ts-metric output{font-size:13px}#ts-root .ts-metric span{font-size:9px}#ts-root .ts-slider-label{font-size:11px}#ts-root .ts-slider-label output{font-size:12px}#ts-root .ts-layer>summary{font-size:12px}#ts-root .ts-layer .ts-layer{padding-left:9px;margin-left:0}#ts-root .ts-formula{font-size:11px}#ts-root .ts-record{display:block}#ts-root #ts-download{margin-top:9px;width:100%;min-height:44px}#ts-root .ts-context{font-size:10px}#ts-root .ts-source{font-size:9px}}
+</style>
+<section id="ts-root" aria-label="教材抗剪问题链" hidden>
+  <details id="ts-level-1" class="ts-chain">
+    <summary id="ts-open">从斜裂缝继续追问：钢筋怎样分担剪力？</summary>
+    <div class="ts-body">
+      <p class="ts-source">来源：11(1).pdf，PDF 第 19 页图 4-27，PDF 第 21 页式 (4-4)、(4-5)。</p>
+      <p class="ts-context">课堂给定需分担剪力 440 kN：取课件包络图数字作为练习，需求已单独给定，不表示已选取规范控制截面。它与当前三维模型的 40 kN 集中荷载是独立数值，下面也没有计算实际承载力。</p>
+      <h3 class="ts-question">1 · 两部分相加等于 440 kN，就足以认为分担合理吗？</h3>
+      <p class="ts-copy">拖动弯起筋拟分担比例，比较混凝土与箍筋共同分担的部分。先试 30%，再试 50%，说明两种分配的区别。</p>
+      <p class="ts-formula">Vu = Vcs + Vsb
+Vcs：混凝土与箍筋的共同抗剪贡献
+Vsb：弯起筋抗剪贡献；单独箍筋贡献另记为 Vsv</p>
+      <label class="ts-slider-label" for="ts-share"><span>拟分给弯起筋的比例</span><output id="ts-share-label" for="ts-share">30%</output></label>
+      <input id="ts-share" type="range" min="0" max="60" step="1" value="30">
+      <div class="ts-endpoints"><span>0%</span><span>40% 教材计入上限</span><span>60%</span></div>
+      <div class="ts-metrics">
+        <div class="ts-metric"><span>课堂给定需分担剪力</span><output id="ts-design-shear" data-ts-value="designShear">440.0 kN</output></div>
+        <div class="ts-metric"><span>混凝土 + 箍筋目标 Vcs</span><output id="ts-vcs" data-ts-value="allocatedVcs">308.0 kN · 70%</output></div>
+        <div class="ts-metric"><span>弯起筋目标 Vsb</span><output id="ts-vsb" data-ts-value="allocatedVsb">132.0 kN · 30%</output></div>
+      </div>
+      <p class="ts-copy">本教材的分担规则：混凝土 + 箍筋部分至少为 60%，可计入的弯起筋部分至多为 40%。对本题分别对应 264 kN 与 176 kN。</p>
+      <p id="ts-allocation-status" class="ts-status" role="status" data-mismatch="false">分配比例符合本题规则；这不代表实际承载力已通过验算。</p>
+      <label class="ts-answer-label" for="ts-answer-allocation">第 1 问 · 我的理由（可选）</label>
+      <textarea id="ts-answer-allocation" rows="3" style="min-height:78px" placeholder="30%与50%为何不同？总和相等能否代表分配合理？"></textarea>
+      <details id="ts-level-2" class="ts-layer">
+        <summary>2 · 箍筋间距减半，Vcs 会加倍吗？</summary>
+        <p class="ts-copy">只比较教材公式指定因子的相对变化。固定截面、箍筋肢数与直径、钢筋强度 fsv，以及其余系数 α、p 等，改变箍筋间距 s。间距比以原设计为 1。</p>
+        <label class="ts-slider-label" for="ts-spacing"><span>箍筋间距比 s / s₀</span><output id="ts-spacing-label" for="ts-spacing">1.00</output></label>
+        <input id="ts-spacing" type="range" min="0.5" max="2" step="0.05" value="1">
+        <div class="ts-endpoints"><span>0.50 · 间距减半</span><span>1.00 · 原间距</span><span>2.00 · 间距加倍</span></div>
+        <div class="ts-presets" role="group" aria-label="比较箍筋间距"><button type="button" data-ts-spacing="0.5">间距减半</button><button type="button" data-ts-spacing="1" aria-pressed="true">原间距</button><button type="button" data-ts-spacing="2">间距加倍</button></div>
+        <div class="ts-metrics">
+          <div class="ts-metric"><span>配箍率比 ρsv / ρsv,0</span><output id="ts-rho-ratio" data-ts-value="rhoRatio">1.000 倍</output></div>
+          <div class="ts-metric"><span>只改变间距时 Vcs 比</span><output id="ts-spacing-vcs-ratio" data-ts-value="vcsSpacingRatio">1.000 倍</output></div>
+          <div class="ts-metric"><span>只改变强度时 Vcs 比</span><output id="ts-strength-vcs-ratio" data-ts-value="vcsStrengthRatio">1.000 倍</output></div>
+        </div>
+        <label class="ts-slider-label" for="ts-strength"><span>混凝土立方体强度比 fcu,k / fcu,k,0</span><output id="ts-strength-label" for="ts-strength">1.00</output></label>
+        <input id="ts-strength" type="range" min="1" max="2" step="0.05" value="1">
+        <div class="ts-presets" role="group" aria-label="比较混凝土强度"><button type="button" data-ts-strength="1" aria-pressed="true">原强度</button><button type="button" data-ts-strength="2">强度加倍</button></div>
+        <p id="ts-sensitivity-formula" class="ts-formula">固定其余量：ρsv ∝ 1/s；Vcs ∝ √ρsv
+固定其余量：Vcs ∝ fcu,k^(1/4)</p>
+        <p id="ts-sensitivity-explain" class="ts-copy"></p>
+        <p class="ts-copy">这里比较的是 Vcs（混凝土 + 箍筋）的公式因子，不能把它当成单独箍筋 Vsv 的线性增减。相对变化也没有给出某根梁实际可用的承载力。保持弯起筋数量等不变时，Vsb 随 sinθs 变化；不能简单说角度加倍、贡献也加倍。</p>
+        <label class="ts-answer-label" for="ts-answer-sensitivity">第 2 问 · 我的理由（可选）</label>
+        <textarea id="ts-answer-sensitivity" rows="3" style="min-height:78px" placeholder="间距减半后，配箍率与Vcs各变为几倍？为什么？"></textarea>
+        <details id="ts-level-3" class="ts-layer">
+          <summary>3 · 回到问题：为什么只增加纵筋不能替代抗剪检查？</summary>
+          <p class="ts-copy">用“弯矩与剪力 → 斜裂缝 → 跨缝钢筋 → 抗剪分担”的顺序作答。结合前两项实验，说明分担比例、配箍率和实际承载力之间的区别。</p>
+          <label class="ts-answer-label" for="ts-answer">我的回答（可选，仅保存在本机）</label>
+          <textarea id="ts-answer" rows="5" placeholder="只增加纵筋主要改变……；剪跨还需要检查……；跨缝钢筋……；本题的比例实验说明……"></textarea>
+          <details id="ts-teacher" class="ts-reference"><summary>教师参考答案 · 回答后再展开</summary><p>增加纵向受力钢筋不能代替对剪力和斜截面破坏的检查。剪跨中弯矩、剪力共同作用，斜裂缝张开后需要可靠的跨缝传力路径。教材将抗剪承载力写为 Vu = Vcs + Vsb，其中 Vcs 包括混凝土与箍筋，不能等同于箍筋单独贡献。440 kN 练习只演示分担目标：Vcs 至少占 60%，可计入的 Vsb 至多占 40%；比例符合要求不代表实际承载力已验算。固定其余量，间距减半使配箍率加倍，Vcs 的相应因子只增至 √2 倍；混凝土强度加倍的相应因子为 2^(1/4) 倍。最终仍需核查实际斜截面抗剪承载力、截面抗剪上限、构造、锚固及抗弯要求，不能仅凭开裂前弹性应力图完成设计。</p><p id="ts-teacher-source" class="ts-source">官方依据详核：JTG 3362—2018 <a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=35" target="_blank" rel="noopener">第 5.2.9 条（PDF 第 35 页，印刷页 28）</a>；<a href="https://xxgk.mot.gov.cn/jigou/glj/202006/P020230330561291441977.pdf#page=37" target="_blank" rel="noopener">第 5.2.13(1) 条（PDF 第 37 页，印刷页 30）</a>。课件公式与 60/40 分担规则按上述来源核对。</p></details>
+          <p class="ts-context">模型与教材的边界：上方是未开裂弹性应力场；本节是教材的抗剪分担与公式相对变化。它们不是同一个分析阶段，弹性主拉方向不能直接给出开裂后的承载力。</p>
+          <div class="ts-record"><p>参数与回答仅在当前浏览器自动保存，没有提交给老师。下载记录含三项问题及你的实验设置，不含参考答案。</p><button id="ts-download" type="button">下载本节记录 .txt</button></div>
+          <p id="ts-save-status" role="status" aria-live="polite">可选记录 · 无线上收集</p>
+        </details>
+      </details>
+    </div>
+  </details>
+</section>
+
   
 <section id="ca-review" class="ca-review" aria-labelledby="ca-review-title" tabindex="-1" hidden>
   <div class="ca-review-top"><div><span class="ca-label">实验后 · 用观察支持解释</span><h2 id="ca-review-title" class="ca-review-heading">把“看到了”写成“理解了”</h2></div><button id="ca-return" class="ca-button" type="button">回到实验</button></div>
   <p class="ca-review-intro">每题写出：你的结论 → 哪一步的现象支持它 → 适用条件。可以回到模型继续试，再补充答案。参考答案默认收起，完成自己的回答后再对照。</p>
   <article class="ca-question" data-question="q1">
     <div class="ca-question-heading"><span class="ca-question-number">01</span><h3>换取面后，实际受力变了吗？</h3></div>
-    <p>在第 7 幅把取面从 0° 转到 45°。为什么面上的剪切箭头消失，只剩法向拉和压？用“固定圆标记变成的椭圆”与“面上拉压、剪切的显示”两项观察，解释材料的实际受力是否改变。</p>
+    <p>在第 7 幅依次取 0°、22.5°、45°，记录面上的 σn、|τnt| 和同一点的 σ1。为什么面上的剪切箭头最终消失，只剩法向拉和压？用数值变化和不变的椭圆，解释材料的实际受力是否改变。</p>
     <label for="ca-answer-1">角度按取面法向计；主方向是主应力作用面的法向。</label><textarea id="ca-answer-1" data-answer="q1" rows="4" placeholder="取面改变时……；椭圆……；面上显示……；实际受力……"></textarea>
-    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>位置和荷载保持不变，转动取面只改变同一应力状态的分解方式。主方向指取面的法向，即拉压箭头所沿方向，不是取面边线方向。法向沿主方向时，该面剪应力为零，只剩法向拉压作用。当前 P 是左剪跨中性轴的纯剪点，两个主方向相互垂直。固定材料圆标记的椭圆不变，面上分量却随角度改变，说明实际受力与变形没有改变，材料也没有随着取面刚性转动。主拉应力是该点各方向中最大的法向应力。</p></details>
+    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>在当前纯剪 P 点，取面为 0°、22.5°、45° 时，σn 约为 0、0.126、0.179 MPa，|τnt| 约为 0.179、0.126、0 MPa；同一点的 σ1 始终约为 0.179 MPa。位置和荷载未变，改变的是应力分解，固定材料圆标记的椭圆不变。主方向是取面的法向，即拉压箭头方向；法向沿主方向时面上剪应力为零，法向应力取极值。两个主方向相互垂直；材料没有随取面刚性转动，“最大”是在同一点各方向之间比较。</p></details>
   </article>
   <article class="ca-question" data-question="q2">
     <div class="ca-question-heading"><span class="ca-question-number">02</span><h3>两处“中性轴”，受力相同吗？</h3></div>
-    <p>比较左剪跨中性轴与跨中纯弯区中性轴。二者的原横截面正应力都为零，为什么小格变形与主拉应力仍不同？正应力为零，能否推出该点没有应力？</p>
+    <p>比较左剪跨中性轴与跨中纯弯区中性轴，分别记录 V、τxy、σ1。二者的原横截面正应力都为零，为什么小格变形与主拉应力仍不同？正应力为零，能否推出该点没有应力？</p>
     <label for="ca-answer-2">观察证据可来自第 1、2、3、4、6、8 幅。</label><textarea id="ca-answer-2" data-answer="q2" rows="4" placeholder="两处的剪力……；剪应力……；小格变形与主拉应力……"></textarea>
-    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>在本例跨中纯弯区，剪力为零，中性轴的正应力与剪应力都为零，主拉应力也为零，有效主方向不唯一。左剪跨中性轴的原横截面正应力虽为零，剪应力却最大，因此有剪切变形，并存在一拉一压的主应力。不能用某一方向的正应力为零判断该点没有应力。这里的判断基于页面采用的未开裂弹性梁模型。</p></details>
+    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>左剪跨中性轴 P 的 V=+40 kN、τxy≈−0.179 MPa、σ1≈0.179 MPa；沿梁长正应力虽为零，仍有剪切变形，纯剪状态的 σ1=|τxy|，主应力一拉一压。跨中纯弯区中性轴的 V、τxy、σ1 均为零，一阶局部伸缩和剪切也为零，不能指定唯一主方向。两处都在中性轴，却有不同的应力状态，因此不能用某一方向正应力为零判断该点没有应力；这些数值来自本页的未开裂弹性梁模型。</p></details>
   </article>
   <article class="ca-question" data-question="q3">
     <div class="ca-question-heading"><span class="ca-question-number">03</span><h3>为什么跨中出现竖裂缝，剪跨出现斜裂缝？</h3></div>
-    <p>用“内力 → 当地应力 → 主拉方向 → 裂缝方向 → 跨缝钢筋”的顺序解释。分别描述跨中与剪跨的裂缝迹线、两侧张开方向，并指出哪些钢筋能跨越示意斜裂缝。</p>
+    <p>先记录跨中底缘与左剪跨中性轴 P 的 σ1、θ1，再用“内力 → 当地应力 → 主拉方向 → 裂缝方向 → 跨缝钢筋”的顺序解释。分别描述两处的裂缝迹线、张开方向，并指出哪些钢筋能跨越示意斜裂缝。仅凭这些弹性应力读数，能否给出最终抗剪承载力？</p>
     <label for="ca-answer-3">可用第 8 幅六个显现按钮逐项对照；再写一项实拍形态作为证据。</label><textarea id="ca-answer-3" data-answer="q3" rows="4" placeholder="跨中……；剪跨……；裂缝张开方向……；跨缝钢筋……；实拍证据……"></textarea>
-    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>本例跨中为纯弯区，下部主要沿梁长受拉，初始张拉裂缝迹线近似垂直于主拉方向，因此近竖向；剪跨同时有弯矩和剪力，主拉方向倾斜，示意裂缝为斜向，左右剪跨相互镜像。裂缝两侧沿主拉方向张开。穿过斜裂缝并有可靠锚固的箍筋、弯起筋，能够承担跨缝拉力，参与抗剪传力。动画的应力线只作开裂前参照；实际配筋还需抗弯、抗剪、锚固与构造校核。照片和视频来自其他试件，可支持形态比较，不能与动画逐点等同。</p></details>
+    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>跨中底缘 σ1≈1.607 MPa、θ1=0°，初始裂缝迹线近竖向；左剪跨 P 的 σ1≈0.179 MPa、θ1=−45°，局部裂缝迹线近 +45°。两处迹线均近似垂直于当地起裂前主拉方向，两侧沿主拉方向张开，右剪跨与左侧镜像。穿过斜裂缝且有可靠锚固的箍筋、弯起筋可承担跨缝拉力；但这些弹性读数不能直接给出最终抗剪承载力，仍需材料、配筋、截面与构造验算。应力线只作开裂前参照；其他试件的实拍支持形态比较，不能与动画逐点等同。</p></details>
   </article>
   <article class="ca-question" data-question="q4">
     <div class="ca-question-heading"><span class="ca-question-number">04</span><h3>请改正三个常见判断</h3></div>
-    <p>判断并改写：① 主拉应力线连接全梁应力最大的点；② 同一条主拉应力线上的应力大小相同；③ 梁内任意点的主方向都与原横截面法向成 45°。每项至少写一句理由。</p>
-    <label for="ca-answer-4">先在第 8 幅比较不同位置的方向与颜色，再联系第 7 幅纯剪点的条件。</label><textarea id="ca-answer-4" data-answer="q4" rows="4" placeholder="① 应改为……，因为……；② ……；③ ……"></textarea>
-    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>① 错。应力线连续连接各点的主拉方向，其切线给出当地的方向；“主拉最大”是在同一点的各方向之间比较。② 错。线上的应力大小可以变化，颜色随当地主拉应力变化，应力线不是等值线，也不是裂缝。③ 错。45° 只对应本页左剪跨中性轴的纯剪例子；同时存在正应力和剪应力的其他点，主方向一般不同。主方向指主应力作用面的法向，不是面内切向。</p></details>
+    <p>判断并改写：① 主拉应力线连接全梁应力最大的点；② 同一条主拉应力线上的应力大小相同；③ 梁内任意点的主方向都与原横截面法向成 45°。先在第 8 幅固定左剪跨同一截面，比较不同高度的至少两组 σ1、θ1，说明不同点的主拉大小与方向是否相同；再沿同一条已接出的应力线观察颜色变化，为第②项作证。</p>
+    <label for="ca-answer-4">不同高度的点不自动属于同一条应力线；第②项须观察同一条线。</label><textarea id="ca-answer-4" data-answer="q4" rows="4" placeholder="① 应改为……，因为……；② ……；③ ……"></textarea>
+    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>① 应力线连接各点的主拉方向，切线表示当地的方向；“主拉最大”是在同一点各方向之间比较。② 沿同一条线可见颜色变化，说明线上 σ1 可变，它不是等值线，也不是裂缝。③ 固定 x=−2.10 m，y=−0.20 m 时 σ1≈0.442 MPa、θ1≈−16.85°；y=+0.20 m 时 σ1≈0.041 MPa、θ1≈−73.15°，均不同于中性轴纯剪点的 −45°。不同高度读数说明不同点的大小与方向可不同；它们不自动属于同一条应力线。主方向指取面法向，45°只对应当前纯剪例子。</p></details>
   </article>
   <article class="ca-question" data-question="q5">
     <div class="ca-question-heading"><span class="ca-question-number">05</span><h3>两个荷载同时加倍，什么变、什么不变？</h3></div>
     <p>迁移思考：保持梁的几何与支承不变，两个荷载按同一比例加倍，并假定梁仍处于线弹性、未开裂状态。内力、当地应力与主拉应力大小怎样变化？非零且主方向唯一的点，其主方向会怎样？能否据页面确定真实梁的起裂时间与位置？</p>
     <label for="ca-answer-5">这是条件明确的推理题；请区分弹性模型结论与真实开裂预测。</label><textarea id="ca-answer-5" data-answer="q5" rows="4" placeholder="在这些假设下，大小……，方向……；关于真实起裂，还需要……"></textarea>
-    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>线弹性、未开裂且荷载同比例变化时，剪力、弯矩、正应力、剪应力及主应力大小均加倍；应力张量整体乘以同一个正数，所以非退化点的主方向不变。零应力或主应力相同的退化状态不能指定唯一有效主方向。页面没有考虑混凝土抗拉强度、缺陷、非线性开裂与裂缝扩展，不能据此确定真实梁的起裂时间或精确位置；应结合材料数据、试验与适用的开裂分析。</p></details>
+    <details class="ca-reference"><summary>教师参考答案 · 回答后再展开</summary><p>在未开裂线弹性假设下，两个荷载同比加倍，内力与当地应力均加倍：P 的 σ1 从 0.178571 增到 0.357143 MPa，θ1仍为 −45°；(−2.10,−0.20) m 处 σ1 从 0.442336 增到 0.884672 MPa，θ1仍约为 −16.85°。应力张量乘以同一正数，非退化主方向不变；零应力或主应力相同的状态不能指定唯一主方向。页面没有求解材料抗拉强度、缺陷及非线性开裂与扩展，不能由这些加倍读数确定真实起裂时间、精确位置或极限承载力。</p></details>
   </article>
   <div class="ca-review-tools"><p class="ca-local-note">记录仅在本机浏览器自动保存，没有提交给老师。需要交作业时，下载后按老师要求提交。</p><div><button id="ca-copy" class="ca-button" type="button">复制我的记录</button><button id="ca-download" class="ca-button ca-primary" type="button">下载我的记录 .txt</button></div></div>
   <p id="ca-review-status" class="ca-review-status" role="status" aria-live="polite">已填写 0 / 5 道综合题；未填写的题目可以稍后补充。</p>
@@ -2393,6 +2475,241 @@ root.GuidedSurface=Object.freeze({draw,localDraw,pick,screen,scales,cell});
   window.addEventListener('guided-stage-change',event=>{if(event.detail&&Number.isFinite(Number(event.detail.stage)))renderStage(event.detail.stage);});
   window.classroomActivity={openReview,returnToExperiment,get currentStage(){return currentStage;}};
   if(lessonAPI())renderStage(lessonAPI().state.stage);else{renderStage(-1);let attempts=0;const connect=()=>{const api=lessonAPI();if(api)renderStage(api.state.stage);else if(++attempts<60)requestAnimationFrame(connect);};requestAnimationFrame(connect);}
+})();
+
+</script>
+<script>
+/* Quantitative evidence from the same elastic model as the interactive lesson. */
+(()=>{
+  'use strict';
+  const $=id=>document.getElementById(id),root=$('qe-root');
+  if(!root)return;
+  const radToDeg=180/Math.PI,EPS=1e-10;
+  const clean=value=>Object.is(value,-0)?0:value;
+  const f=(value,digits=6)=>Number.isFinite(value)?(Math.abs(value)<.5*10**-digits?0:value).toFixed(digits).replace('-','−'):'—';
+  const pair=(x,y)=>'P：x = '+f(x,2)+' m，y = '+f(y,2)+' m';
+  const valueAt=(api,stage,fallback=0)=>Number.isFinite(Number(api.values&&api.values[stage]))?Number(api.values[stage]):fallback;
+  const titles=['表面变形','内力图','正应力','剪应力','层间传力','剪切变形','主方向','裂缝与配筋'];
+  let queued=false,lastStage=null,lastReading=null;
+
+  function reading(){
+    const api=window.guidedLesson,M=window.ShearMechanics;
+    if(!api||!M)return {ready:false};
+    const stage=Math.max(-1,Math.min(6,Math.round(api.state.stage))),c=M.constants,I=c.B*c.H**3/12;
+    let x=-2.1,y=0,displacement=null;
+    if(stage===-1){x=api.state.selected.x;y=api.state.selected.y;displacement=window.GuidedDisplacement&&window.GuidedDisplacement.sample(x,y);}
+    if(stage===0)x=valueAt(api,0);
+    if(stage===1){x=0;y=valueAt(api,1);}
+    if(stage===2)y=valueAt(api,2,.4);
+    if(stage===3){x=-2;y=c.H/2-c.H*valueAt(api,3);}
+    if(stage===6){const selected=api.principalFlow&&api.principalFlow.selected;if(selected){x=selected.x;y=selected.y;}}
+    const s=stage===-1&&displacement?displacement.stress:M.stressAt(x,y),Q=c.B*(c.H**2/4-y**2)/2;
+    const positiveTension=!!s.defined&&s.s1>EPS;
+    const r={ready:true,stage,stageTitle:titles[stage+1],x,y,position:{x,y},B:c.B,H:c.H,I,Q,V:s.V,M:s.M,sigmaX:s.sigma,tauXY:s.tau,sigma1:s.s1,sigma2:s.s2,tensionDefined:positiveTension,thetaDeg:positiveTension?clean(s.theta*radToDeg):null,nearLoad:false,source:stage===-1?'GuidedDisplacement.sample':'ShearMechanics.stressAt'};
+    if(stage===-1&&displacement){
+      const p=Number.isFinite(api.state.introProgress)?api.state.introProgress:1;
+      r.epsilonX=displacement.strain2[0][0];r.epsilonY=displacement.strain2[1][1];r.gammaXY=displacement.gammaXY;
+      r.gaugeLengthMM=100*(1+r.epsilonX);r.actualRightAngleDeg=90-r.gammaXY*radToDeg;
+      r.nearLoad=!!displacement.nearLoad;r.nearAppliedLoad=!!displacement.nearAppliedLoad;r.nearSupport=!!displacement.nearSupport;
+      r.axialStrainCorrection=displacement.axialStrainCorrection;r.displacementMagnification=1+499*p;r.localMagnification=1+11999*p;
+    }
+    if(stage===2){r.averageAbsTau=Math.abs(s.V)/(c.B*c.H)/1000;r.maxAbsTau=1.5*r.averageAbsTau;}
+    if(stage===3){
+      // These are the exact locations used by GuidedDiagrams.shearReason.
+      r.xL=-2.2;r.xR=-1.8;r.dx=r.xR-r.xL;r.ML=M.stressAt(r.xL,0).M;r.MR=M.stressAt(r.xR,0).M;
+      r.NL=r.ML*Q/I;r.NR=r.MR*Q/I;r.deltaN=r.NR-r.NL;r.interfaceArea=c.B*r.dx;r.interfaceAbsTau=r.deltaN/r.interfaceArea/1000;
+    }
+    if(stage===4)r.deformationProgress=valueAt(api,4);
+    if(stage===5){
+      r.alphaUI=valueAt(api,5);r.normalAngleDeg=-r.alphaUI;
+      const t=M.tractionAt(-2.1,0,-r.alphaUI);
+      r.normalStress=t.normalStress;r.shearStress=t.shearStress;r.absShearStress=Math.abs(t.shearStress);r.isPrincipalPlane=t.isPrincipalPlane;
+    }
+    if(stage===6)r.revealProgress=valueAt(api,6);
+    for(const key of Object.keys(r))if(typeof r[key]==='number')r[key]=clean(r[key]);
+    return r;
+  }
+
+  function content(r){
+    const point=pair(r.x,r.y),base='b = '+f(r.B,2)+' m，h = '+f(r.H,2)+' m，I = bh³/12 = '+f(r.I,5)+' m⁴。';
+    const entries=[];
+    const add=(key,label,value,unit='',digits=6)=>entries.push({key,label,text:typeof value==='string'?value:f(value,digits)+(unit?' '+unit:'')});
+    let core='',predict='',action='',formula='',explain='',next='',position=point,warning='';
+    if(r.stage===-1){
+      core='看不出小格变形，就能判断这个位置没有受力吗？';
+      predict='先判断：跨中下缘与左剪跨中性轴，哪个主要沿梁长伸缩，哪个主要改变直角？变形图被放大，会不会改变真实应变？';
+      action='用原页面的“跨中下缘”和“左剪跨中性轴”按钮比较，也可直接点梁上小格。拖动放大滑块，再点“恢复实际变形”；核对下面的实际读数是否随显示倍率改变。';
+      add('epsilonX','沿梁长实际应变 εx',r.epsilonX*1e6,'με',3);add('gammaXY','实际工程剪应变 γxy',r.gammaXY*1e6,'μrad',3);add('gaugeLengthMM','100 mm 标距变为',r.gaugeLengthMM,'mm',6);add('actualRightAngleDeg','原直角变为',r.actualRightAngleDeg,'°',6);
+      formula='εx = ∂u/∂x；γxy = ∂u/∂y + ∂v/∂x。\n100 mm 标距 → 100(1 + εx) mm = '+f(r.gaugeLengthMM)+' mm。\n原直角 → 90° − γxy·180/π = '+f(r.actualRightAngleDeg)+'°。\n本处应变直接读取同一连续位移场，未乘显示倍率。';
+      explain='小变形可能肉眼不可见。整梁位移与局部小格用了不同的显示倍率，但这里保留真实的一阶微小应变；局部形状扣除了平移与刚体转动。';
+      next='这些变形对应怎样的剪力与弯矩？只检查弯曲够不够？';
+      position=point+'；当前整梁位移 ×'+f(r.displacementMagnification,0)+'，小格形变 ×'+f(r.localMagnification,0)+'；真实读数不随倍率放大。';
+      if(r.nearLoad)warning='当前选点在集中荷载或支座左右 0.1 m 的平滑过渡区：位移场在这里是教学近似，轴向应变含翘曲修正，不能作为集中力邻域的精确应力解。';
+    }
+    if(r.stage===0){
+      core='跨中弯矩最大，是否只检查抗弯就能判断整根梁安全？';
+      predict='先判断：两个荷载之间剪力会不会为零？剪跨的弯矩较小，是否就无需再看剪力？';
+      action='用原页面的“左剪跨 → 跨中 → 右剪跨”快捷按钮，或沿梁移动蓝色截面；同时比较当前截面的 V、M。';
+      add('V','截面剪力 V',r.V,'kN',2);add('M','截面弯矩 M',r.M,'kN·m',2);
+      formula='本例两个集中荷载各为 40 kN，支座反力各为 40 kN。\n|x| < 1.2 m：V = 0，M = 72 kN·m。\n1.2 m < |x| < 3 m：|V| = 40 kN，M = 40(3 − |x|) kN·m。\n当前：V = '+f(r.V,2)+' kN；M = '+f(r.M,2)+' kN·m。';
+      explain='纯弯区的 V 为零而 M 不为零；剪跨内 V 不为零，M 随位置变化。弯矩与剪力说明不同的传力需求，不能用抗弯检查代替抗剪检查。这里只读取弹性内力，还没有进行任何承载力验算。';
+      next='弯矩怎样分配到截面各高度？某一方向正应力为零是否意味着没有其他作用？';
+      position='当前截面：x = '+f(r.x,2)+' m；剪力、弯矩采用原模型的正负号约定。';
+    }
+    if(r.stage===1){
+      core='跨中中性轴的正应力为零，能推广为剪跨中性轴也没有应力吗？';
+      predict='先判断：在当前跨中截面，上缘和下缘的 σx 符号怎样？沿高度走到 σx = 0，还需要知道哪个内力，才能判断该点的完整受力？';
+      action='依次点“上缘 → 中性轴 → 下缘”，记录 σx 的符号和大小；再到下一幅固定左剪跨比较剪应力。';
+      add('y','截面高度 y',r.y,'m',2);add('M','跨中弯矩 M',r.M,'kN·m',2);add('sigmaX','沿梁长正应力 σx',r.sigmaX,'MPa');
+      formula=base+'\nσx = −My/I（kN/m²），换成 MPa 再除以 1000。\n当前 σx = −('+f(r.M,2)+') × ('+f(r.y,2)+') / '+f(r.I,5)+' / 1000 = '+f(r.sigmaX)+' MPa。';
+      explain='y 向上为正，正弯矩使上部受压（σx < 0）、下部受拉（σx > 0）。本例跨中纯弯区恰有 V = 0，所以其中性轴是零应力点；不能把这个特殊结果直接推广到 V ≠ 0 的剪跨。';
+      next='同样是中性轴，左剪跨为什么仍会发生剪切变形？';
+    }
+    if(r.stage===2){
+      core='同一个剪力 V，为什么中性轴的剪应力比截面平均值大？';
+      predict='先判断：剪应力会均匀铺在整个矩形截面吗？若 σx = 0 而 τxy ≠ 0，这个材料点能否完全不变形？';
+      action='保持左剪跨 x = −2.10 m，依次看上缘、中性轴、下缘；比较当前 |τxy|、截面平均值与中性轴最大值。';
+      add('tauXY','当前位置剪应力 τxy',r.tauXY,'MPa');add('averageAbsTau','截面平均 |V|/(bh)',r.averageAbsTau,'MPa');add('maxAbsTau','中性轴最大 |τxy|',r.maxAbsTau,'MPa');
+      formula=base+'\nQ(y) = b(h²/4 − y²)/2 = '+f(r.Q)+' m³。\nτxy = −VQ/(Ib) / 1000 = '+f(r.tauXY)+' MPa。\n平均 |V|/(bh) / 1000 = '+f(r.averageAbsTau)+' MPa。\n矩形截面中性轴：|τ|max = 1.5 × 平均值 = '+f(r.maxAbsTau)+' MPa。';
+      explain='本模型的矩形截面剪应力沿高度呈抛物线，上下缘为零，中性轴最大。截面平均值不能代替任意一点的当地剪应力。负号表示剪切方向，比较强弱时看其绝对值。';
+      next='水平层与层之间为什么也必须传递剪切？';
+    }
+    if(r.stage===3){
+      core='一层材料两端的纵向合力不同，差额由谁平衡？';
+      predict='先判断：左、右两个截面的弯矩不同，保留水平切面上方的材料后，两端压合力会相同吗？切到整个截面底缘时，合力差为零是否意味着弯矩也为零？';
+      action='向下移动原滑块：从顶缘经过中性轴，到达底缘。比较两端纵向合力、合力差和水平界面剪应力。';
+      add('NL','左端上方轴向合力大小 NL',r.NL,'kN',3);add('NR','右端上方轴向合力大小 NR',r.NR,'kN',3);add('deltaN','两端合力差 ΔN',r.deltaN,'kN',3);add('interfaceAbsTau','界面剪应力大小 |τ|',r.interfaceAbsTau,'MPa');
+      formula='与原图保持一致：xL = −2.2 m，xR = −1.8 m，Δx = 0.4 m。\nML = '+f(r.ML,2)+'，MR = '+f(r.MR,2)+' kN·m；Q = '+f(r.Q)+' m³。\nNL = MLQ/I = '+f(r.NL,3)+' kN；NR = MRQ/I = '+f(r.NR,3)+' kN。\nΔN = NR − NL = '+f(r.deltaN,3)+' kN。\n界面面积 bΔx = '+f(r.interfaceArea,3)+' m²。\n|τ| = ΔN/(bΔx) / 1000 = '+f(r.interfaceAbsTau)+' MPa。';
+      explain='纵向合力差由水平界面的剪切平衡；中性轴处 Q 最大，合力差与界面剪应力最大。继续向下，下部拉力的差逐渐抵消上部压力的差。到完整截面时轴向合力差为零，拉压仍构成弯矩，不能说弯矩消失。';
+      next='四面剪切作用在同一小块上，怎样同时产生一伸一缩？';
+      position='水平切面：y = '+f(r.y,2)+' m；观察段 x = −2.2 至 −1.8 m；表中的纵向合力按原图取压合力大小。';
+    }
+    if(r.stage===4){
+      core='剪跨中性轴 σx = 0，为什么仍存在斜向主拉应力？';
+      predict='先判断：一个只在原取面上表现为剪切的小块，有没有沿某个斜方向伸长的趋势？“原面没有正应力”与“所有方向都没有拉应力”是一回事吗？';
+      action='从原形逐渐放大变形，观察方块两条对角线一伸一缩，圆变成椭圆。看这里的 σ1 是否随显示进度改变。';
+      add('sigmaX','原横截面正应力 σx',r.sigmaX,'MPa');add('tauXY','原取面剪应力 τxy',r.tauXY,'MPa');add('sigma1','主拉应力 σ1',r.sigma1,'MPa');add('sigma2','主压应力 σ2',r.sigma2,'MPa');
+      formula='固定 P：x = −2.10 m，y = 0。\nσx = 0；τxy = '+f(r.tauXY)+' MPa。\n纯剪状态：σ1 = |τxy| = '+f(r.sigma1)+' MPa；σ2 = −|τxy| = '+f(r.sigma2)+' MPa。\n变形放大显示进度 = '+f(r.deformationProgress*100,0)+'%；荷载不变。';
+      explain='同一个应力状态，在原面上看是剪切，换取面后可分解成法向拉压。当前纯剪点有一拉一压的主应力；放大形状只是让变形可见，不增加应力，也不是开裂过程。';
+      next='亲手转取面，能否找到法向拉应力最大的方向？';
+    }
+    if(r.stage===5){
+      core='同一个点转动取面，怎样找到最大的法向拉应力？';
+      predict='先判断：0°、22.5°、45° 时，面上的 σn 与 |τnt| 怎样此消彼长？如果 σn 增大，是材料实际受力变大了，还是同一受力换了一种分解？';
+      action='依次点原页面的 0°、22.5°、45°。同时比较当前面上的 σn、|τnt|、固定的 σ1/σ2，以及不跟着取面转动的椭圆。';
+      add('alphaUI','原控件转角 α',r.alphaUI,'°',2);add('normalStress','当前面法向拉应力 σn',r.normalStress,'MPa');add('absShearStress','当前面剪应力 |τnt|',r.absShearStress,'MPa');add('sigma1','同一点最大法向应力 σ1',r.sigma1,'MPa');add('sigma2','同一点最小法向应力 σ2',r.sigma2,'MPa');
+      formula='原控件 α 为顺时针显示角；模型法向角 β = −α = '+f(r.normalAngleDeg,2)+'°。\nβ 从梁长 +x 轴起，逆时针为正；主方向指取面法向。\n当前纯剪：σn = τxy sin(2β) = '+f(r.normalStress)+' MPa。\nτnt = τxy cos(2β) = '+f(r.shearStress)+' MPa。\nσ1 = '+f(r.sigma1)+'，σ2 = '+f(r.sigma2)+' MPa，随取面角度保持不变。';
+      explain='当法向沿主方向时，面上剪应力为零，法向拉应力达到同一点的最大值。主方向是拉压箭头所沿的面法向，不是面内边线。45° 只适用于当前纯剪例子；材料和椭圆没有随假想取面刚性转动。';
+      next='每个点都能在自己的各方向中取最大值；怎样再比较不同位置的 σ1？';
+      position=point+'；只有取面法向在转动，荷载、位置和实际应力状态不变。';
+    }
+    if(r.stage===6){
+      core='各点都有自己的“最大方向”，怎样比较大小，又为什么不能直接据图计算跨缝钢筋？';
+      predict='先判断：左剪跨上部、中性轴、下部的 σ1 是否相同？主拉应力线连接的是方向，还是一串全梁应力最大的点？';
+      action='先点原页面的“左剪跨上部 / 中性轴 / 下部”，比较各点 σx、τxy、σ1 与 θ1；位置按钮会返回“各点方向”。再显示应力线、裂缝张开、箍筋和弯起筋，观察钢筋如何跨缝。';
+      add('sigmaX','当前 P 的正应力 σx',r.sigmaX,'MPa');add('tauXY','当前 P 的剪应力 τxy',r.tauXY,'MPa');add('sigma1','当前 P 的主拉应力 σ1',r.sigma1,'MPa');add('thetaDeg','当前 P 的主拉方向 θ1',r.tensionDefined?r.thetaDeg:'无有效正主拉方向',r.tensionDefined?'°':'',2);
+      formula='本模型取 σy = 0。\nσ1 = σx/2 + √[(σx/2)² + τxy²] = '+f(r.sigma1)+' MPa。\nσ2 = σx/2 − √[(σx/2)² + τxy²] = '+f(r.sigma2)+' MPa。\n'+(r.tensionDefined?'θ1 = ½ atan2(2τxy, σx) = '+f(r.thetaDeg,2)+'°（从梁长 +x 轴逆时针量，方向轴与加 180° 等价）。':'当前没有正的主拉应力，不指定或绘制有效的主拉方向；灰点仍可能受压。');
+      explain='先在同一点的不同方向中找最大的法向应力 σ1，再比较不同点的 σ1；这两种“最大”不同。应力线的切线给出当地方向，线上的大小可变。示意裂缝近似垂直于开裂前主拉方向，两侧沿该方向张开；可靠锚固的跨缝钢筋可传递拉力，但这些弹性数值没有计算开裂后混凝土、钢筋和锚固的共同承载力。';
+      next='展开下方“从斜裂缝继续追问”，用教材关系考察混凝土与箍筋、弯起筋怎样分担剪力，以及箍筋间距减半时抗剪贡献怎样变化。';
+      position=point+'；θ1 表示主应力作用面的法向。没有正主拉作用时不显示伪方向。';
+      warning=r.revealProgress>=2?'裂缝与配筋阶段：上述读数仍是开裂前弹性参照，不是开裂后应力场；不能据此确定真实起裂时间、精确裂缝轨迹或配筋承载力。':'';
+    }
+    return {core,predict,action,formula,explain,next,position,warning,entries};
+  }
+
+  function render(){
+    queued=false;
+    const r=reading();lastReading=r;
+    if(!r.ready)return;
+    const text=content(r);
+    if(lastStage!==r.stage){for(const id of ['qe-layer-1','qe-layer-2','qe-layer-3'])$(id).open=false;lastStage=r.stage;}
+    root.dataset.stage=String(r.stage);$('qe-kicker').textContent='第 '+(r.stage+2)+' / 8 幅 · '+r.stageTitle+' · 本幅核心问题';
+    for(const key of ['core','predict','action','formula','explain','next','position'])$('qe-'+key).textContent=text[key];
+    const nodes=text.entries.map(entry=>{const card=document.createElement('div');card.className='qe-metric';const label=document.createElement('span');label.className='qe-metric-label';label.textContent=entry.label;const output=document.createElement('output');output.id='qe-metric-'+entry.key;output.dataset.qeValue=entry.key;output.textContent=entry.text;card.append(label,output);return card;});
+    $('qe-metrics').replaceChildren(...nodes);$('qe-warning').hidden=!text.warning;$('qe-warning').textContent=text.warning;
+  }
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(render);}
+  const observer=new MutationObserver(schedule);
+  for(const id of ['gd-value','gd-selected-stress','gd-surface']){const node=$(id);if(node)observer.observe(node,{childList:true,subtree:true,characterData:true,attributes:id==='gd-surface'});}
+  window.addEventListener('guided-stage-change',schedule);
+  window.addEventListener('load',schedule,{once:true});
+  window.quantitativeEvidence={reading,refresh:schedule,get lastReading(){return lastReading;}};
+  schedule();
+})();
+
+</script>
+<script>
+/* Textbook shear learning activity. Existing model loads remain unchanged; notes stay local. */
+(()=>{
+  'use strict';
+  const $=id=>document.getElementById(id),root=$('ts-root');
+  if(!root)return;
+  const storageKey='concrete-textbook-shear-20261011-v1',designShear=440;
+  const clamp=(n,min,max)=>Math.min(max,Math.max(min,n));
+  const finite=(node,fallback,min,max)=>{const n=Number(node.value);return clamp(Number.isFinite(n)?n:fallback,min,max);};
+  const f=(n,d=3)=>(Math.abs(n)<.5*10**-d?0:n).toFixed(d);
+  let queued=false,storageOK=true,wasVisible=false;
+  function reading(){
+    const bentSharePercent=finite($('ts-share'),30,0,60),spacingRatio=finite($('ts-spacing'),1,.5,2),strengthRatio=finite($('ts-strength'),1,1,2);
+    const vcsSharePercent=100-bentSharePercent,allocatedVsb=designShear*bentSharePercent/100,allocatedVcs=designShear-allocatedVsb;
+    const maxCreditedVsb=designShear*.4,minRequiredVcs=designShear*.6,creditedVsb=Math.min(allocatedVsb,maxCreditedVsb);
+    const rhoRatio=1/spacingRatio,vcsSpacingRatio=Math.sqrt(rhoRatio),vcsStrengthRatio=strengthRatio**.25;
+    const stage=window.guidedLesson&&window.guidedLesson.state?window.guidedLesson.state.stage:null;
+    return {stage,visible:stage===6,designShear,bentSharePercent,vcsSharePercent,allocatedVsb,allocatedVcs,maxCreditedVsb,minRequiredVcs,creditedVsb,creditedTotal:allocatedVcs+creditedVsb,allocationGap:Math.max(0,designShear-allocatedVcs-creditedVsb),allocationMismatch:bentSharePercent>40,spacingRatio,rhoRatio,vcsSpacingRatio,strengthRatio,vcsStrengthRatio,combinedVcsRatio:vcsSpacingRatio*vcsStrengthRatio,allocationAnswer:$('ts-answer-allocation').value,sensitivityAnswer:$('ts-answer-sensitivity').value,answer:$('ts-answer').value};
+  }
+  function setStatus(text,error=false){$('ts-save-status').textContent=text;$('ts-save-status').dataset.error=String(error);}
+  function save(){const r=reading();try{localStorage.setItem(storageKey,JSON.stringify({version:1,bentSharePercent:r.bentSharePercent,spacingRatio:r.spacingRatio,strengthRatio:r.strengthRatio,allocationAnswer:r.allocationAnswer,sensitivityAnswer:r.sensitivityAnswer,answer:r.answer}));storageOK=true;setStatus('已保存在当前浏览器 · 无线上收集，未提交给老师。');}catch(error){storageOK=false;setStatus('当前浏览器不能自动保存；请下载记录保留本次内容。',true);}}
+  function restore(){try{const s=JSON.parse(localStorage.getItem(storageKey)||'null');if(s&&s.version===1){for(const [id,key,min,max] of [['ts-share','bentSharePercent',0,60],['ts-spacing','spacingRatio',.5,2],['ts-strength','strengthRatio',1,2]])if(typeof s[key]==='number'&&Number.isFinite(s[key]))$(id).value=clamp(s[key],min,max);for(const [id,key] of [['ts-answer-allocation','allocationAnswer'],['ts-answer-sensitivity','sensitivityAnswer'],['ts-answer','answer']])if(typeof s[key]==='string')$(id).value=s[key];}}catch(error){storageOK=false;setStatus('当前浏览器不能读取自动保存内容；可继续实验，并下载本次记录。',true);}}
+  function render(){
+    queued=false;
+    const r=reading();root.hidden=!r.visible;
+    if(!r.visible&&wasVisible)for(const id of ['ts-level-1','ts-level-2','ts-level-3','ts-teacher'])$(id).open=false;
+    wasVisible=r.visible;
+    $('ts-share-label').textContent=f(r.bentSharePercent,0)+'%';$('ts-spacing-label').textContent=f(r.spacingRatio,2);$('ts-strength-label').textContent=f(r.strengthRatio,2);
+    $('ts-design-shear').textContent=f(r.designShear,1)+' kN';$('ts-vcs').textContent=f(r.allocatedVcs,1)+' kN · '+f(r.vcsSharePercent,0)+'%';$('ts-vsb').textContent=f(r.allocatedVsb,1)+' kN · '+f(r.bentSharePercent,0)+'%';
+    $('ts-rho-ratio').textContent=f(r.rhoRatio)+' 倍';$('ts-spacing-vcs-ratio').textContent=f(r.vcsSpacingRatio)+' 倍';$('ts-strength-vcs-ratio').textContent=f(r.vcsStrengthRatio)+' 倍';
+    $('ts-allocation-status').dataset.mismatch=String(r.allocationMismatch);
+    $('ts-allocation-status').textContent=r.allocationMismatch?'分配不匹配：弯起筋拟分担超过 40%，混凝土 + 箍筋目标低于 60%。弯起筋按本题规则最多计入 '+f(r.maxCreditedVsb,1)+' kN，当前分配缺口为 '+f(r.allocationGap,1)+' kN。这是分配规则检查，不是完整安全验算。':'分配比例符合本题规则：混凝土 + 箍筋目标不少于 '+f(r.minRequiredVcs,1)+' kN，弯起筋拟计入不超过 '+f(r.maxCreditedVsb,1)+' kN。实际承载力尚待验算。';
+    $('ts-sensitivity-formula').textContent='固定其余量：ρsv / ρsv,0 = 1 / (s / s₀) = '+f(r.rhoRatio)+'。\n只改变间距：Vcs / Vcs,0 = 1 / √(s / s₀) = '+f(r.vcsSpacingRatio)+'。\n只改变混凝土强度：Vcs / Vcs,0 = (fcu,k / fcu,k,0)^(1/4) = '+f(r.vcsStrengthRatio)+'。';
+    $('ts-sensitivity-explain').textContent='当前间距比为 '+f(r.spacingRatio,2)+'，配箍率比为 '+f(r.rhoRatio)+'；间距因素对应的 Vcs 比为 '+f(r.vcsSpacingRatio)+'。当前混凝土强度比为 '+f(r.strengthRatio,2)+'，强度因素对应的 Vcs 比为 '+f(r.vcsStrengthRatio)+'。若这两个因素同时按当前设置改变、其余量固定，公式给出的合并比为 '+f(r.combinedVcsRatio)+'；这只是相对量，未计算实际 Vcs。';
+    root.querySelectorAll('[data-ts-spacing]').forEach(b=>b.setAttribute('aria-pressed',String(Math.abs(Number(b.dataset.tsSpacing)-r.spacingRatio)<1e-9)));
+    root.querySelectorAll('[data-ts-strength]').forEach(b=>b.setAttribute('aria-pressed',String(Math.abs(Number(b.dataset.tsStrength)-r.strengthRatio)<1e-9)));
+  }
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(render);}
+  function changed(){save();schedule();}
+  for(const id of ['ts-share','ts-spacing','ts-strength']){const control=$(id);control.addEventListener('input',changed);control.addEventListener('change',changed);}
+  root.addEventListener('click',event=>{const spacing=event.target.closest('button[data-ts-spacing]'),strength=event.target.closest('button[data-ts-strength]');if(spacing){$('ts-spacing').value=spacing.dataset.tsSpacing;changed();}if(strength){$('ts-strength').value=strength.dataset.tsStrength;changed();}});
+  for(const id of ['ts-answer-allocation','ts-answer-sensitivity','ts-answer'])$(id).addEventListener('input',save);
+  function recordText(){
+    const r=reading();
+    return [
+      '教材抗剪问题链 · 本节记录',
+      '来源：11(1).pdf，PDF 第19页图4-27，第21页式(4-4)、(4-5)。',
+      '官方详核：JTG 3362—2018，第5.2.9条（PDF第35页/印刷28页）、第5.2.13(1)条（PDF第37页/印刷30页）。',
+      '导出时间：'+new Date().toLocaleString('zh-CN'),
+      '记录仅在本机，未提交给老师。','',
+      '问题1：两部分相加等于440 kN，就足以认为分担合理吗？',
+      '课堂给定需分担剪力440 kN：取课件包络图数字作为练习；需求已单独给定，不表示已选取规范控制截面；独立于三维模型40 kN集中荷载。',
+      '弯起筋拟分担：'+f(r.bentSharePercent,0)+'%，'+f(r.allocatedVsb,1)+' kN。',
+      '混凝土+箍筋拟分担：'+f(r.vcsSharePercent,0)+'%，'+f(r.allocatedVcs,1)+' kN。',
+      '分配规则：Vcs至少60%，可计入Vsb至多40%。',
+      '当前结果：'+(r.allocationMismatch?'分配不匹配；按计入上限后的分配缺口 '+f(r.allocationGap,1)+' kN。':'分配比例符合本题规则。')+' 这不代表实际承载力已通过验算。',
+      '第1问我的理由：'+(r.allocationAnswer.trim()||'（未填写）'),'',
+      '问题2：箍筋间距减半，Vcs会加倍吗？',
+      '间距比：'+f(r.spacingRatio,2)+'；配箍率比：'+f(r.rhoRatio)+'；单独间距因素Vcs比：'+f(r.vcsSpacingRatio)+'。',
+      '混凝土强度比：'+f(r.strengthRatio,2)+'；单独强度因素Vcs比：'+f(r.vcsStrengthRatio)+'。',
+      '同时改变两项、其余量固定时合并比：'+f(r.combinedVcsRatio)+'。',
+      '固定截面、箍筋肢数与直径、fsv及其余系数；以上为公式相对变化，非实际承载力。',
+      '第2问我的理由：'+(r.sensitivityAnswer.trim()||'（未填写）'),'',
+      '问题3：为什么只增加纵筋不能替代抗剪检查？',
+      '第3问我的回答：'+(r.answer.trim()||'（未填写）'),'',
+      '分析边界：弹性应力图不等于开裂后承载力。实际抗剪承载力、截面上限、构造、锚固与抗弯要求仍需核查。'
+    ].join('\n');
+  }
+  $('ts-download').addEventListener('click',()=>{try{const blob=new Blob(['\uFEFF',recordText()],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='教材抗剪-问题链记录.txt';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);setStatus('已生成本节记录下载；请查看浏览器下载列表。文件不代表已提交。');}catch(error){setStatus('下载未完成，请选中回答文字手动复制保存。',true);}});
+  window.addEventListener('guided-stage-change',schedule);window.addEventListener('load',schedule,{once:true});
+  window.textbookShear={reading,refresh:schedule,recordText};
+  restore();schedule();
 })();
 
 </script>
